@@ -16,3 +16,14 @@ jobs:
       - run: npm ci
       - run: npm run build
       - run: node --test --test-reporter=spec --test-timeout=60000 "test/*.test.mjs"
+  relay:
+    # Private repo only: the relay folder is not part of the public core.
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - name: Relay tests (skipped when relay/ is absent)
+        run: |
+          if [ -f relay/package.json ]; then cd relay && npm ci && npm test; else echo "no relay in this repo"; fi

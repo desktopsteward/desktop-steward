@@ -4,3 +4,4 @@ node_modules/
 build/
 relay/node_modules/
 relay/.wrangler/
+.dev.vars*

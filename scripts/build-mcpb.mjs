@@ -44,4 +44,14 @@ if (process.platform === "darwin" && fs.existsSync(pngOut)) {
 run("npm install --omit=dev --no-audit --no-fund --silent", bundle);
 const out = path.join(root, "build", `desktop-steward-${manifest.version}-${platform === "darwin" ? "mac" : platform === "win32" ? "windows" : "linux"}.mcpb`);
 run(`npx -y @anthropic-ai/mcpb pack "${bundle}" "${out}"`);
+// Signing is opt-in (DESKTOP_STEWARD_SIGN=1) until Claude Desktop can verify signatures: as of Oct 2026 its
+// verifier (node-forge pkcs7.verify) is an unimplemented stub, so every signed bundle reads as "unsigned"
+// (modelcontextprotocol/mcpb issues #276/#277) and signed zips can even be rejected on install (#278).
+const signDir = process.env.DESKTOP_STEWARD_SIGNING_DIR ?? path.join(process.env.HOME ?? "", ".config", "desktop-steward", "signing");
+if (process.env.DESKTOP_STEWARD_SIGN === "1" && ["cert.pem", "key.pem", "DeveloperIDG2CA.pem"].every((f) => fs.existsSync(path.join(signDir, f)))) {
+  run(`npx -y @anthropic-ai/mcpb sign "${out}" -c "${path.join(signDir, "cert.pem")}" -k "${path.join(signDir, "key.pem")}" -i "${path.join(signDir, "DeveloperIDG2CA.pem")}"`);
+  run(`npx -y @anthropic-ai/mcpb verify "${out}"`);
+} else {
+  console.log("not signed (set DESKTOP_STEWARD_SIGN=1 once Claude Desktop verifies signatures)");
+}
 console.log("bundle:", out);
