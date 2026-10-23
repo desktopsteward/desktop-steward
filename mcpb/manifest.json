@@ -1,0 +1,70 @@
+{
+  "manifest_version": "0.3",
+  "name": "desktop-steward",
+  "display_name": "Desktop Steward",
+  "version": "0.2.0",
+  "description": "Let Claude tidy, find and organize your files safely. Plain rules, asks before anything risky, and every change can be undone.",
+  "long_description": "Desktop Steward gives Claude safe hands on your computer.\n\n* Choose which folders Claude may read and which it may change\n* Claude always asks before deleting or replacing anything\n* Every change can be undone for 7 days\n* Ready-made tasks: tidy Downloads, find duplicate photos, free disk space, find documents\n\nNo terminal, no cloud, nothing leaves your computer.",
+  "author": {
+    "name": "ED&EU LTD",
+    "url": "https://desktopsteward.com"
+  },
+  "icon": "icon.png",
+  "server": {
+    "type": "node",
+    "entry_point": "dist/index.js",
+    "mcp_config": {
+      "command": "node",
+      "args": [
+        "${__dirname}/dist/index.js"
+      ],
+      "env": {
+        "DESKTOP_STEWARD_READ_FOLDERS": "${user_config.read_folders}",
+        "DESKTOP_STEWARD_WRITE_FOLDERS": "${user_config.write_folders}",
+        "DESKTOP_STEWARD_ASK_BEFORE_DELETE": "${user_config.ask_before_delete}"
+      }
+    }
+  },
+  "user_config": {
+    "read_folders": {
+      "type": "directory",
+      "title": "Folders Claude may read",
+      "description": "Optional. Leave empty for Desktop, Documents, Downloads and Pictures.",
+      "multiple": true,
+      "required": false
+    },
+    "write_folders": {
+      "type": "directory",
+      "title": "Folders Claude may change",
+      "description": "Optional. Leave empty for Documents/AI Workspace and Downloads. Claude may create, move and (after asking) delete files only here.",
+      "multiple": true,
+      "required": false
+    },
+    "ask_before_delete": {
+      "type": "boolean",
+      "title": "Ask before deleting",
+      "description": "Recommended. Deleted files are kept for 7 days either way.",
+      "default": true
+    }
+  },
+  "compatibility": {
+    "claude_desktop": ">=0.10.0",
+    "platforms": [
+      "darwin",
+      "win32"
+    ],
+    "runtimes": {
+      "node": ">=18.0.0"
+    }
+  },
+  "keywords": [
+    "files",
+    "organize",
+    "tidy",
+    "duplicates",
+    "disk space",
+    "undo",
+    "safe"
+  ],
+  "license": "MIT"
+}

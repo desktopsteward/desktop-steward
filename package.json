@@ -1,0 +1,30 @@
+{
+  "name": "desktop-steward",
+  "version": "0.2.0",
+  "description": "Safe hands for your AI on your computer: files, search and apps with plain-language rules and undo.",
+  "type": "module",
+  "license": "MIT",
+  "private": true,
+  "bin": {
+    "desktop-steward": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "start": "node dist/index.js",
+    "test": "npm run build && node --test \"test/*.test.mjs\"",
+    "inspector": "npx @modelcontextprotocol/inspector node dist/index.js",
+    "bundle": "node scripts/build-mcpb.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.0",
+    "@vscode/ripgrep": "^1.15.0",
+    "mammoth": "^1.8.0",
+    "unpdf": "^1.0.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  }
+}

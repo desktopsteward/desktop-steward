@@ -1,0 +1,12 @@
+import { z } from "zod";
+/** Ready-made tasks shown by the chat app as one-click prompts. */
+export function registerPrompts({ server }) {
+    const card = (name, title, description, body, defaultFolder) => server.registerPrompt(name, { title, description, argsSchema: { folder: z.string().optional().describe(`Folder to work in (default ${defaultFolder})`) } }, ({ folder }) => ({ messages: [{ role: "user", content: { type: "text", text: body(folder || defaultFolder) } }] }));
+    card("tidy_downloads", "Tidy up Downloads", "Sort files into folders by type and month.", (f) => `Look at ${f} and propose how to sort the files into folders by type (Documents, Pictures, Installers, Archives, Other) and by month. Show me the plan first with counts, then after I agree move the files. Do not delete anything.`, "~/Downloads");
+    card("find_duplicate_photos", "Find duplicate photos", "Find identical pictures and suggest which copies to remove.", (f) => `Find duplicate files in ${f}, focusing on photos. Show the groups and how much space could be freed. Suggest which copy to keep in each group (prefer the one in the better-named folder). Ask me before deleting anything.`, "~/Pictures");
+    card("free_disk_space", "Free up disk space", "Find what takes the most space and suggest safe clean-ups.", (f) => `Check what takes the most space in ${f}. List the biggest folders and files, mark which ones look safe to remove (old installers, archives, duplicates), and ask me before removing anything.`, "~");
+    card("tidy_desktop", "Tidy the Desktop", "Move clutter from the Desktop into sensible folders.", (f) => `Look at ${f}. Group the loose files into a few sensible folders inside Documents/AI Workspace/Desktop cleanup, keep shortcuts and apps in place, show me the plan first, then move after I agree.`, "~/Desktop");
+    card("find_documents", "Find documents by topic", "Find contracts, invoices or any documents about a topic.", (f) => `Search ${f} for documents about the topic I will name next (by file name and by text inside PDFs and Word files). List what you find with dates and a one-line summary of each.`, "~/Documents");
+    card("photos_by_date", "Rename photos by date", "Rename photos using their modified date so they sort in order.", (f) => `In ${f}, rename the photos to the pattern YYYY-MM-DD_originalname so they sort by date. Show the first 10 renames as a preview, then do all after I agree.`, "~/Pictures");
+}
+//# sourceMappingURL=prompts.js.map
