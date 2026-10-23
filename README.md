@@ -48,6 +48,10 @@ Settings live in the Claude Desktop extension panel, or in `~/.desktop-steward/c
 | `confirmThreshold` | 10 | Moving more items than this asks first |
 | `keepHistoryDays` | 7 | How long undo copies and deleted files are kept |
 
+## Privacy
+
+Desktop Steward reads only the folders you opened to it and keeps copies of changed or deleted files for undo in `~/.desktop-steward` on your own computer (7 days by default). The core sends nothing anywhere and has no telemetry. Full policy: [Privacy](https://desktopsteward.com/privacy/) · Security model: [Security](https://desktopsteward.com/security/) · Contact: hello@desktopsteward.com
+
 ## License
 
 MIT. Copyright ED&EU LTD. Desktop Steward is not affiliated with Anthropic.

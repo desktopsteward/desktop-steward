@@ -9,6 +9,7 @@
     "url": "https://desktopsteward.com"
   },
   "homepage": "https://desktopsteward.com",
+  "privacyPolicyUrl": "https://desktopsteward.com/privacy/",
   "repository": "https://github.com/desktopsteward/desktop-steward",
   "license": "MIT",
   "keywords": [
