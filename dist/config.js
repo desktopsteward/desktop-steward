@@ -1,6 +1,7 @@
 import os from "node:os";
 import path from "node:path";
 import fs from "node:fs/promises";
+import { watchFile } from "node:fs";
 export const HOME = os.homedir();
 export const APP_DIR = process.env.DESKTOP_STEWARD_HOME ?? path.join(HOME, ".desktop-steward");
 export const CONFIG_FILE = path.join(APP_DIR, "config.json");
@@ -93,5 +94,18 @@ export async function ensureDirs(cfg) {
     for (const w of cfg.writeFolders) {
         await fs.mkdir(w, { recursive: true }).catch(() => { });
     }
+}
+/** Keeps a loaded config in step with config.json (the panel saves there; the extension and the app both read it). */
+export function watchConfig(cfg) {
+    let last = 0;
+    watchFile(CONFIG_FILE, { interval: 2000, persistent: false }, async (st) => {
+        if (st.mtimeMs === last)
+            return;
+        last = st.mtimeMs;
+        try {
+            Object.assign(cfg, await loadConfig());
+        }
+        catch { /* keep the old rules */ }
+    });
 }
 //# sourceMappingURL=config.js.map

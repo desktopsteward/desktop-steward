@@ -197,6 +197,7 @@ ${footer(t, L, lang, pp)}
 
 const write = (rel, html) => { const f = path.join(ROOT, "site", rel); fs.mkdirSync(path.dirname(f), { recursive: true }); fs.writeFileSync(f, html); };
 const sitemapExtra = [];
+write("downloads/latest.json", JSON.stringify({ version: VERSION, page: `${SITE}/download/`, mac: `${SITE}/downloads/app/mac`, windows: `${SITE}/downloads/app/windows`, extensionMac: `${SITE}/downloads/desktop-steward-${VERSION}-mac.mcpb`, extensionWindows: `${SITE}/downloads/desktop-steward-${VERSION}-windows.mcpb` }) + "\n");
 for (const t of langs) {
   const p = prefix(t.lang);
   write(`${p}/index.html`, home(t, t.lang));

@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { shrinkImage, REMOTE_IMAGE_LIMIT } from "../dist/extras/shrink.js";
+import { shrinkImage, REMOTE_IMAGE_LIMIT, lastShrinkError } from "../dist/extras/shrink.js";
 
 test("shrinkImage leaves small images alone and scales big ones under the limit", { skip: process.platform === "linux" ? "no resizer on linux" : false }, async () => {
   const tiny = Buffer.from("iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==", "base64").toString("base64");
@@ -17,7 +17,7 @@ test("shrinkImage leaves small images alone and scales big ones under the limit"
   const png = Buffer.concat([Buffer.from([137, 80, 78, 71, 13, 10, 26, 10]), chunk("IHDR", ihdr), chunk("IDAT", deflateSync(raw, { level: 1 })), chunk("IEND", Buffer.alloc(0))]);
   assert.ok(png.length > REMOTE_IMAGE_LIMIT);
   const small = await shrinkImage(png.toString("base64"), "image/png");
-  assert.ok(small, "resizer available");
+  assert.ok(small, "resizer available: " + lastShrinkError);
   assert.equal(small.mimeType, "image/jpeg");
   assert.ok(Buffer.from(small.data, "base64").length <= REMOTE_IMAGE_LIMIT);
 });
