@@ -1,7 +1,7 @@
 {
   "name": "desktop-steward",
   "displayName": "Desktop Steward",
-  "version": "0.1.3",
+  "version": "0.3.0",
   "description": "Safe hands for Claude on your computer: tidy, find and organize files with plain folder rules, a confirmation window before anything risky, and undo for every change. No terminal.",
   "author": { "name": "ED&EU LTD", "url": "https://desktopsteward.com" },
   "homepage": "https://desktopsteward.com",
