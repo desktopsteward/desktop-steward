@@ -8,7 +8,7 @@ import { registerSearchTools } from "./tools/search.js";
 import { registerHistoryTools, describeRules } from "./tools/history.js";
 import { registerPrompts } from "./prompts.js";
 import { registerExtras } from "./extras/index.js";
-const VERSION = "0.2.0";
+import { VERSION } from "./version.js";
 /** Builds a fully registered MCP server. Used for the stdio session and, separately, for a remote session. */
 export function createServer(cfg, journal, version = VERSION) {
     const server = new McpServer({ name: "desktop-steward", version }, {

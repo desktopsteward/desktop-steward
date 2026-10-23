@@ -1,0 +1,511 @@
+{
+ "lang": "es",
+ "dir": "ltr",
+ "name": "Español",
+ "nav": {
+  "how": "Cómo funciona",
+  "safety": "Seguridad",
+  "compare": "Comparar",
+  "faq": "Preguntas",
+  "guides": "Guías",
+  "pro": "Pro",
+  "download": "Descargar",
+  "security": "Modelo de seguridad",
+  "privacy": "Privacidad",
+  "contact": "Contacto",
+  "home": "Inicio",
+  "chatgpt": "ChatGPT"
+ },
+ "home": {
+  "title": "Desktop Steward — Deja que Claude o ChatGPT ordene tus archivos, con seguridad",
+  "desc": "Desktop Steward es una extensión gratuita que permite a Claude o ChatGPT ordenar, encontrar y organizar tus archivos. Reglas de carpetas claras, una ventana de confirmación antes de cualquier paso arriesgado y deshacer para cada cambio. Sin terminal.",
+  "pill": "Funciona con Claude Desktop, Claude en tu móvil y ChatGPT · macOS y Windows",
+  "h1a": "Deja que Claude o ChatGPT ordene tus archivos ",
+  "h1b": "sin temer por ellos.",
+  "lead": "Desktop Steward da al chat de IA manos cuidadosas en tu ordenador. Ordena, encuentra y limpia, pregunta antes de cualquier paso arriesgado y cada cambio se puede deshacer. Instálalo una vez en Claude Desktop; con Pro, úsalo desde Claude en el móvil o desde ChatGPT.",
+  "cta": "Descargar para Mac o Windows",
+  "cta2": "Ver cómo funciona",
+  "trust": [
+   "Sin terminal",
+   "Deshacer 7 días",
+   "Código abierto",
+   "Funciona sin conexión"
+  ],
+  "demo": [
+   "Crea un archivo test.txt en AI Workspace con el texto «hola»",
+   "Desktop Steward: Escribir archivo",
+   "Hecho: test.txt está en Documentos/AI Workspace. Se puede deshacer durante 7 días.",
+   "Borra ese archivo",
+   "Desktop Steward: Borrar archivos",
+   "Borrado. Se guarda 7 días por si lo quieres de vuelta.",
+   "Recupéralo",
+   "Desktop Steward: Deshacer",
+   "test.txt vuelve a estar en Documentos/AI Workspace."
+  ],
+  "dialog": {
+   "title": "Desktop Steward",
+   "text": "¿Borrar 1 elemento? ~/Documents/AI Workspace/test.txt. Se guarda 7 días y se puede deshacer.",
+   "deny": "No permitir",
+   "allow": "Permitir"
+  },
+  "choose": {
+   "title": "¿Qué chat usas?",
+   "claude": [
+    "Claude",
+    "Claude Desktop, la app del móvil o el navegador"
+   ],
+   "chatgpt": [
+    "ChatGPT",
+    "Plus, Pro, Business o Enterprise"
+   ]
+  },
+  "diagram": {
+   "clients": [
+    [
+     "Claude Desktop",
+     "en este ordenador"
+    ],
+    [
+     "App de Claude",
+     "en tu móvil"
+    ],
+    [
+     "Claude",
+     "en el navegador"
+    ],
+    [
+     "ChatGPT",
+     "web y app"
+    ]
+   ],
+   "center": [
+    "Desktop Steward",
+    "en tu ordenador"
+   ],
+   "outputs": [
+    "Tus archivos, con tus reglas",
+    "Pregunta antes de lo arriesgado",
+    "Deshacer 7 días"
+   ],
+   "note": "Móvil, navegador y ChatGPT se conectan a través del relé (Pro). Claude Desktop no necesita nada más."
+  },
+  "look": {
+   "eyebrow": "Así se ve",
+   "h2": "Un chat, una ventana de confirmación, un deshacer",
+   "sub": "La misma conversación desde el ordenador o desde el móvil. Los pasos arriesgados siempre se detienen en una ventana en el ordenador."
+  },
+  "how": {
+   "eyebrow": "Cómo funciona",
+   "h2": "Tres pasos, sin pantallas de configuración",
+   "sub": "Instálalo como una extensión del navegador, mantén las carpetas por defecto o elige las tuyas y pide con palabras sencillas. Mac y Windows.",
+   "claudeTab": "Con Claude",
+   "chatgptTab": "Con ChatGPT",
+   "steps": [
+    [
+     "Descarga y haz doble clic",
+     "Claude Desktop lo instala con un clic. Sin terminal, sin archivos de configuración, sin cuenta."
+    ],
+    [
+     "Mantén o cambia las carpetas",
+     "Por defecto Claude puede leer Escritorio, Documentos, Descargas e Imágenes, y cambiar archivos solo en Documentos/AI Workspace y Descargas."
+    ],
+    [
+     "Pide con palabras sencillas",
+     "«Ordena mis Descargas por tipo y mes.» «Encuentra fotos duplicadas.» Las tareas listas están en el menú +."
+    ]
+   ],
+   "chatgptSub": "Instálalo una vez en el ordenador, conecta ChatGPT con un código de un solo uso y pide desde cualquier sitio. Mismas reglas, mismas confirmaciones, mismo deshacer.",
+   "chatgptSteps": [
+    [
+     "Instala la aplicación en el ordenador",
+     "La aplicación Desktop Steward funciona por sí sola, sin Claude Desktop. Pulsa «Activar» en su panel para obtener un código."
+    ],
+    [
+     "Conectar ChatGPT",
+     "Ajustes → Conectores → Crear → pega la dirección, elige OAuth, escribe el código."
+    ],
+    [
+     "Pedir",
+     "«¿Qué hay en mis Descargas?» «Haz un PDF con los escaneos de hoy.» ChatGPT trabaja en el ordenador; las confirmaciones se quedan en el ordenador."
+    ]
+   ],
+   "chatgptCta": "La guía completa de ChatGPT"
+  },
+  "safety": {
+   "eyebrow": "Seguridad ante todo",
+   "h2": "Hecho para que un error nunca sea el fin de un archivo",
+   "sub": "La IA se equivoca. Desktop Steward está diseñado para que ningún error sea definitivo y los peligrosos nunca ocurran sin ti.",
+   "cards": [
+    [
+     "Reglas con palabras sencillas",
+     "Tú eliges qué carpetas puede leer Claude y cuáles puede cambiar. Lo demás no existe para él."
+    ],
+    [
+     "Pregunta antes de lo arriesgado",
+     "Borrar, reemplazar un archivo o mover muchos archivos abre una ventana de confirmación en tu ordenador. Claude no puede pulsarla por ti."
+    ],
+    [
+     "Deshacer 7 días",
+     "La versión anterior se guarda antes de un cambio. Los archivos borrados esperan en una zona de retención. Di «deshacer» y vuelve."
+    ],
+    [
+     "Siempre fuera de alcance",
+     "Contraseñas, claves, datos del navegador, correo, carpetas del sistema y todo lo que se ejecuta con doble clic. Sin terminal, sin red."
+    ],
+    [
+     "Un panel con todo lo que hizo",
+     "Di «abre el panel» para ver cada cambio con un botón Deshacer, el registro de actividad y las reglas vigentes. Solo accesible desde tu ordenador."
+    ]
+   ],
+   "note": "Lee el <a href=\"{security}\">modelo de seguridad</a> completo, incluido aquello de lo que no protege."
+  },
+  "tasks": {
+   "eyebrow": "Tareas listas",
+   "h2": "Un clic en el menú +",
+   "sub": "Cada tarea te muestra primero el plan y solo mueve archivos cuando tú lo apruebas.",
+   "cards": [
+    [
+     "Ordenar Descargas",
+     "Clasifica los archivos en carpetas por tipo y mes."
+    ],
+    [
+     "Encontrar fotos duplicadas",
+     "Encuentra imágenes idénticas y cuánto espacio desperdician."
+    ],
+    [
+     "Liberar espacio en disco",
+     "Las carpetas y archivos más grandes, con sugerencias seguras."
+    ],
+    [
+     "Ordenar el Escritorio",
+     "Mueve el desorden a unas pocas carpetas sensatas."
+    ],
+    [
+     "Encontrar documentos por tema",
+     "Busca en nombres y en el texto de PDF y archivos de Word."
+    ],
+    [
+     "Escaneos en un solo PDF",
+     "Las fotos de un documento se convierten en un PDF, en orden."
+    ],
+    [
+     "Comprimir y descomprimir",
+     "Empaqueta una carpeta para enviarla, descomprime un archivo con seguridad."
+    ],
+    [
+     "Renombrar fotos por fecha",
+     "Para que por fin se ordenen bien."
+    ]
+   ]
+  },
+  "compare": {
+   "eyebrow": "Comparar",
+   "h2": "Desktop Steward vs Desktop Commander",
+   "sub": "Desktop Commander es una gran herramienta para desarrolladores: terminal, edición de código, servidores. Desktop Steward es para todos los demás. A octubre de 2026.",
+   "head": [
+    "Función",
+    "Desktop Steward",
+    "Desktop Commander"
+   ],
+   "rows": [
+    [
+     "Instalación",
+     "Doble clic",
+     "npx, archivo de configuración o Docker",
+     1,
+     0
+    ],
+    [
+     "Deshacer cambios",
+     "Sí, 7 días",
+     "No",
+     1,
+     0
+    ],
+    [
+     "Pregunta antes de borrar",
+     "Siempre, diálogo del sistema",
+     "No",
+     1,
+     0
+    ],
+    [
+     "Acceso a terminal",
+     "No, a propósito",
+     "Sí",
+     0,
+     1
+    ],
+    [
+     "Reglas de carpetas",
+     "Leer vs cambiar, en palabras sencillas",
+     "Una lista de permitidos, el terminal la salta",
+     1,
+     0
+    ],
+    [
+     "Usar desde el móvil",
+     "Sí, Pro: inicio con código de un solo uso",
+     "Sí, Pro",
+     1,
+     1
+    ],
+    [
+     "Nube",
+     "Relé opcional para el móvil, solo transmite, no guarda nada",
+     "Relé opcional, datos de llamadas guardados temporalmente",
+     1,
+     0
+    ],
+    [
+     "Precio",
+     "Gratis; Pro 10 $/mes para acceso desde el móvil",
+     "Gratis; Pro 20 $/mes para acceso remoto",
+     1,
+     1
+    ]
+   ]
+  },
+  "faq": {
+   "eyebrow": "Preguntas",
+   "h2": "Lo que nos preguntan",
+   "items": [
+    [
+     "¿Necesito Claude Desktop?",
+     "No. Con Claude Desktop (basta un plan gratuito) usa la extensión. Con ChatGPT, o Claude en el móvil o en el navegador, usa la aplicación Desktop Steward, que funciona por sí sola."
+    ],
+    [
+     "¿Sale algo de mi ordenador?",
+     "No, salvo que actives el acceso remoto. En local, Desktop Steward no tiene servidor ni telemetría; Claude solo ve lo que le pides leer, igual que cuando pegas texto en un chat. Con el acceso remoto, tus peticiones pasan por el relé de Desktop Steward, que transmite los mensajes entre la app de chat y tu ordenador sin guardar nada de su contenido."
+    ],
+    [
+     "¿Puede Claude borrar mis archivos por error?",
+     "Cada borrado abre en tu ordenador una ventana de confirmación que Claude no puede pulsar. Los archivos borrados se guardan 7 días y vuelven con «deshacer»."
+    ],
+    [
+     "¿Por qué el aviso rojo «no verificado» al instalar?",
+     "Claude Desktop lo muestra para cualquier extensión que no esté en el directorio de Anthropic. Estamos trabajando en la inclusión."
+    ],
+    [
+     "¿Hay versión para Windows?",
+     "Sí, desde la versión 0.1.3. La ventana de confirmación en Windows es un diálogo estándar del sistema."
+    ],
+    [
+     "¿Puedo usarlo desde el móvil?",
+     "Sí. Di «activa el acceso remoto» en el ordenador, añade el conector en la app de Claude del móvil y escribe el código de un solo uso. Las confirmaciones siguen ocurriendo en el ordenador. <a href=\"{phone}\">Guía paso a paso</a>."
+    ],
+    [
+     "¿Es de código abierto?",
+     "Sí, el núcleo tiene licencia MIT: <a href=\"https://github.com/desktopsteward/desktop-steward\">github.com/desktopsteward/desktop-steward</a>. El modelo de seguridad y el código están abiertos a revisión."
+    ]
+   ]
+  },
+  "final": {
+   "h2": "Dale a Claude manos cuidadosas.",
+   "sub": "Gratis, sin conexión, todo se puede deshacer.",
+   "cta": "Descargar para Mac o Windows",
+   "note": "Versión {version} · Extensión para Claude Desktop o aplicación independiente"
+  }
+ },
+ "download": {
+  "title": "Descargar Desktop Steward — para Claude Desktop, ChatGPT y tu móvil",
+  "desc": "Instala Desktop Steward: la extensión para Claude Desktop o la aplicación independiente para ChatGPT y Claude en la web o el móvil. Gratis, deshacer para cada cambio.",
+  "h1": "Descargar",
+  "lead": "Versión {version}. Dos formas de instalar: la extensión para Claude Desktop o la aplicación Desktop Steward independiente.",
+  "mac": "Descargar para Mac (7 MB)",
+  "win": "Descargar para Windows (7 MB)",
+  "note": "En Windows, las ventanas de confirmación usan el diálogo estándar del sistema.",
+  "h2": "Instalar en tres pasos",
+  "steps": [
+   [
+    "Haz doble clic en el archivo descargado",
+    "Claude Desktop se abre y muestra lo que puede hacer la extensión. Si no se abre, arrastra el archivo a la ventana de Claude Desktop."
+   ],
+   [
+    "Pulsa Guardar",
+    "No hace falta rellenar nada. Por defecto: leer Escritorio, Documentos, Descargas, Imágenes; cambiar archivos solo en Documentos/AI Workspace y Descargas."
+   ],
+   [
+    "Empieza un chat nuevo",
+    "Prueba «Muéstrame las reglas de Desktop Steward» o abre el menú + → Conectores → Añadir desde Desktop Steward para las tareas listas."
+   ]
+  ],
+  "uninstallH2": "Desinstalar",
+  "uninstall": "Extensión: Claude Desktop → Ajustes → Extensiones → Desktop Steward → Desinstalar. Aplicación: en Mac, ciérrala desde el icono de la barra de menús y mueve Desktop Steward de Aplicaciones a la Papelera; en Windows, Configuración → Aplicaciones → Desktop Steward → Desinstalar. Las copias para deshacer están en ~/.desktop-steward (Mac) o %USERPROFILE%\\.desktop-steward (Windows); borra esa carpeta si no quieres dejar nada.",
+  "whichH2": "¿Cuál necesito?",
+  "which": [
+   "Chateas con Claude Desktop en este ordenador → la <strong>extensión</strong>.",
+   "Usas ChatGPT, o Claude en el móvil o en el navegador → la <strong>aplicación</strong> (sin Claude Desktop).",
+   "Puedes instalar las dos: comparten carpetas, reglas e historial."
+  ],
+  "extH2": "Extensión para Claude Desktop",
+  "appH2": "Aplicación Desktop Steward",
+  "appLead": "Un pequeño icono en la barra de menús (Mac) o en la bandeja (Windows). Arranca al iniciar sesión, mantiene este ordenador accesible para Claude en la web o el móvil y para ChatGPT, y abre en el navegador un panel con el código, las reglas, el historial y deshacer.",
+  "appMac": "Descargar la aplicación para Mac (96 MB)",
+  "appWin": "Descargar la aplicación para Windows (instalador)",
+  "appSteps": [
+   [
+    "Abre el archivo descargado",
+    "Mac: descomprime, arrastra Desktop Steward a Aplicaciones y ábrelo. Windows: ejecuta el instalador. El icono aparece en la barra de menús o la bandeja y el panel se abre en el navegador."
+   ],
+   [
+    "Pulsa «Activar»",
+    "El panel muestra una dirección y un código de un solo uso, con los pasos para Claude y para ChatGPT."
+   ],
+   [
+    "Conecta y pregunta",
+    "Añade el conector en Claude o ChatGPT, escribe el código y pregunta: «¿Qué hay en mis Descargas?»"
+   ]
+  ],
+  "appNote": "Mac: Apple Silicon e Intel, macOS 13 o posterior. Windows 10/11, 64 bits. El acceso remoto es gratis 7 días y luego forma parte de Pro (10 $/mes)."
+ },
+ "pro": {
+  "title": "Desktop Steward Pro — tu ordenador desde tu móvil",
+  "desc": "Desktop Steward Pro añade acceso remoto: usa los archivos de tu ordenador desde la app de Claude en el móvil o desde ChatGPT. 10 $ al mes, los primeros 7 días gratis, cancela cuando quieras.",
+  "eyebrow": "Desktop Steward Pro",
+  "h1": "Tu ordenador, desde tu móvil.",
+  "lead": "Todo lo de la versión gratuita sigue siendo gratis. Pro añade acceso remoto: pide a la app de Claude en el móvil, a Claude en el navegador o a ChatGPT los archivos de tu ordenador. Las confirmaciones siguen en el ordenador y cada cambio se puede deshacer.",
+  "price": "10 $",
+  "priceNote": "al mes · los primeros 7 días gratis · cancela cuando quieras",
+  "trial": "<strong>Cada ordenador tiene 7 días gratis de acceso remoto</strong> desde la primera activación. No hace falta tarjeta para la prueba en el ordenador; suscríbete aquí cuando termine.",
+  "bullets": [
+   "Hasta 3 ordenadores con una licencia",
+   "Funciona con Claude (móvil, web) y ChatGPT",
+   "El relé solo transmite y no guarda nada",
+   "Desactívalo en el ordenador cuando quieras; todas las apps se desconectan a la vez"
+  ],
+  "buyH3": "Conseguir Pro",
+  "buyNote": "Recibirás una clave de licencia por correo. En el ordenador, dile a Claude «activa la licencia» y la clave.",
+  "email": "tu@ejemplo.com",
+  "buy": "Empezar 7 días gratis",
+  "payNote": "Pagos con Stripe. Gestiona o cancela desde el <a href=\"https://relay.desktopsteward.com/billing/portal\">portal de facturación</a>.",
+  "opening": "Abriendo el pago…",
+  "unavailable": "El pago no está disponible ahora mismo.",
+  "howH2": "Cómo funciona",
+  "steps": [
+   [
+    "Compra y recibe una clave",
+    "La clave llega por correo y aparece en la página de agradecimiento."
+   ],
+   [
+    "Actívala en el ordenador",
+    "En Claude Desktop di «activa la licencia DSW-…». Luego «activa el acceso remoto»."
+   ],
+   [
+    "Conecta el móvil",
+    "Añade el conector en la app de Claude y escribe el código de un solo uso. <a href=\"{phone}\">Paso a paso</a>."
+   ]
+  ]
+ },
+ "phone": {
+  "slug": "use-claude-on-your-phone-with-your-computer",
+  "title": "Usar Claude en tu móvil con los archivos de tu ordenador",
+  "desc": "Paso a paso para personas no técnicas: activa el acceso remoto en Desktop Steward, conecta la app de Claude en iPhone o Android (o ChatGPT) y pide archivos desde cualquier sitio. Las confirmaciones se quedan en el ordenador.",
+  "eyebrow": "Guía",
+  "h1": "Usar Claude en tu móvil con los archivos de tu ordenador",
+  "lead": "Estás en el sofá y el portátil está en otra habitación. Así puedes pedir a Claude en el móvil que encuentre, ordene o envíe un archivo que vive en el ordenador. Sin pasos técnicos, unos cinco minutos una sola vez.",
+  "needH2": "Qué necesitas",
+  "need": [
+   "Un Mac o un PC con Windows con Claude Desktop y <a href=\"{download}\">Desktop Steward</a> instalados. El ordenador debe estar encendido y Claude Desktop abierto mientras lo usas desde el móvil.",
+   "La app de Claude en el móvil (iPhone o Android), Claude en un navegador o ChatGPT."
+  ],
+  "tip1": "El acceso remoto pasa por el relé de Desktop Steward, que solo transmite los mensajes y no guarda nada. Forma parte de <a href=\"{pro}\">Desktop Steward Pro</a> (10 $ al mes, los primeros 7 días gratis). Los primeros 7 días son gratis en cada ordenador.",
+  "s1H2": "Paso 1 — en el ordenador: activa el acceso remoto",
+  "s1": [
+   "Abre Claude Desktop y empieza un chat nuevo.",
+   "Escribe: <strong>«Activa el acceso remoto»</strong>.",
+   "Claude responde con dos cosas: una <strong>dirección</strong> como <code>https://relay.desktopsteward.com/mcp</code> y un <strong>código de un solo uso</strong> de 8 dígitos, por ejemplo <code>4821 0375</code>. El código vale 10 minutos y para una sola app."
+  ],
+  "s1chat": [
+   "Activa el acceso remoto",
+   "El acceso remoto está activado. Dirección del conector: https://relay.desktopsteward.com/mcp<br>Código de un solo uso: 4821 0375 (válido 10 minutos, un uso). …"
+  ],
+  "s1note": "Deja este chat abierto; en un momento escribirás el código en el móvil.",
+  "s2H2": "Paso 2 — en el móvil: añade el conector",
+  "s2app": "App de Claude (iPhone o Android)",
+  "s2": [
+   "Toca tu foto de perfil o el menú y luego <strong>Ajustes</strong>.",
+   "Toca <strong>Conectores</strong> y luego <strong>Añadir conector personalizado</strong>.",
+   "En el campo de dirección escribe exactamente <code>https://relay.desktopsteward.com/mcp</code>. Llámalo «Mi ordenador». Deja vacíos los campos de autenticación. Toca <strong>Añadir</strong>.",
+   "El móvil abre una página de inicio de sesión «Conectar Claude a tu ordenador». Escribe los 8 dígitos del paso 1 y toca <strong>Conectar</strong>.",
+   "Vuelves a la app de Claude. El conector aparece como conectado."
+  ],
+  "s2web": "<strong>Claude en un navegador (claude.ai)</strong>: el mismo camino, Ajustes → Conectores → Añadir conector personalizado.",
+  "s2gpt": "<strong>ChatGPT</strong> (Plus, Pro o Business): Ajustes → Conectores → Crear. Pega la misma dirección como servidor MCP, elige <strong>OAuth</strong> como autenticación y guarda. Cuando ChatGPT abra la página de inicio de sesión, escribe el código. Si no ves «Crear», activa el modo desarrollador en Ajustes → Conectores → Avanzado.",
+  "s3H2": "Paso 3 — pide",
+  "s3chat": [
+   "¿Qué hay en mi carpeta de Descargas?",
+   "Claude en el móvil lista la carpeta desde el ordenador.",
+   "Encuentra la factura de marzo y léeme el total.",
+   "Claude busca en el ordenador, abre el PDF y responde."
+  ],
+  "s3note": "Todo funciona igual que en el ordenador: las mismas carpetas, las mismas reglas, deshacer para cada cambio.",
+  "okH2": "Cuando Claude necesita tu visto bueno",
+  "ok": "Borrar, reemplazar o mover muchos archivos abre la ventana de confirmación <strong>en el ordenador</strong>, no en el móvil. Si estás lejos del ordenador, el móvil espera hasta un minuto y luego dice que el ordenador no respondió. Es a propósito: un móvil perdido no puede borrar nada en tu ordenador.",
+  "fixH2": "Si algo no funciona",
+  "fix": [
+   "<strong>«El ordenador está desconectado»</strong>: el ordenador está en reposo o Claude Desktop está cerrado. Despiértalo, abre Claude Desktop e inténtalo de nuevo.",
+   "<strong>«Ese código no funcionó»</strong>: los códigos caducan a los 10 minutos y valen una vez. En el ordenador di <strong>«muestra el código de acceso remoto»</strong> para obtener otro.",
+   "<strong>La página de inicio de sesión nunca aparece</strong>: comprueba que la dirección está escrita exactamente, con <code>/mcp</code> al final.",
+   "<strong>Otro móvil o ChatGPT también</strong>: cada app necesita su propio código: «muestra el código de acceso remoto»."
+  ],
+  "offH2": "Desactivarlo",
+  "off": "En el ordenador di <strong>«Desactiva el acceso remoto»</strong>. Todas las apps conectadas se desconectan a la vez. Di «activa el acceso remoto» para empezar de nuevo; las apps necesitarán un código nuevo.",
+  "finalH2": "Empieza en el ordenador",
+  "finalSub": "Instala Desktop Steward, di «activa el acceso remoto» y tu móvil llega a tus archivos.",
+  "finalCta": "Descargar para Mac o Windows"
+ },
+ "chatgpt": {
+  "slug": "chatgpt",
+  "title": "Usar ChatGPT con los archivos de tu ordenador — Desktop Steward",
+  "desc": "Un camino claro para usuarios de ChatGPT: instala Desktop Steward en el ordenador, conecta ChatGPT con un código de un solo uso y pide tus archivos desde cualquier dispositivo. Las confirmaciones se quedan en el ordenador y cada cambio se puede deshacer.",
+  "eyebrow": "ChatGPT",
+  "h1": "Usar ChatGPT con los archivos de tu ordenador",
+  "lead": "ChatGPT no ve tu disco por sí solo. Desktop Steward le da manos cuidadosas: tus carpetas, tus reglas, una ventana de confirmación antes de cualquier paso arriesgado y deshacer. Aquí está el camino completo, unos diez minutos una sola vez.",
+  "needH2": "Qué necesitas",
+  "need": [
+   "Un Mac o un PC con Windows que siga encendido mientras lo usas.",
+   "Un plan de ChatGPT con conectores: Plus, Pro, Business o Enterprise. (El plan gratuito aún no puede añadir conectores personalizados.)",
+   "La aplicación Desktop Steward en el ordenador: descarga gratuita, funciona por sí sola. No hace falta cuenta de Claude."
+  ],
+  "s1H2": "Paso 1 — instala Desktop Steward en el ordenador",
+  "s1": [
+   "<a href=\"{download}\">Descarga la aplicación Desktop Steward</a> para Mac o Windows y ábrela. Aparece un icono en la barra de menús o la bandeja y el panel se abre en el navegador.",
+   "En el panel pulsa <strong>Activar</strong> y elige la pestaña <strong>ChatGPT</strong>.",
+   "Obtienes una <strong>dirección</strong> (<code>https://relay.desktopsteward.com/mcp</code>) y un <strong>código de un solo uso</strong> de 8 dígitos, válido 10 minutos."
+  ],
+  "s2H2": "Paso 2 — conecta ChatGPT",
+  "s2": [
+   "En ChatGPT abre <strong>Ajustes → Conectores</strong>. Si no hay botón <strong>Crear</strong>, abre <strong>Avanzado</strong> y activa el <strong>modo desarrollador</strong>.",
+   "Pulsa <strong>Crear</strong>. Nombre: «Mi ordenador». URL del servidor MCP: <code>https://relay.desktopsteward.com/mcp</code>. Autenticación: <strong>OAuth</strong>. Guarda.",
+   "ChatGPT abre la página de inicio de sesión de Desktop Steward. Escribe los 8 dígitos y pulsa <strong>Conectar</strong>.",
+   "De vuelta en ChatGPT, empieza un chat, abre el menú de herramientas (el + o «…» junto al cuadro de mensaje) y activa «Mi ordenador»."
+  ],
+  "s3H2": "Paso 3 — pide",
+  "s3chat": [
+   "¿Qué hay en mi carpeta de Descargas?",
+   "ChatGPT lista la carpeta desde el ordenador.",
+   "Combina los tres escaneos de hoy en un PDF.",
+   "ChatGPT los encuentra, muestra el orden de las páginas y crea el PDF en Documentos/AI Workspace."
+  ],
+  "s3note": "Las mismas carpetas y reglas que en Claude. Borrar, reemplazar o mover muchos archivos abre la ventana de confirmación <strong>en el ordenador</strong>; ChatGPT espera tu respuesta.",
+  "whyH2": "Cómo funciona en el ordenador",
+  "why": "La aplicación Desktop Steward vive en la barra de menús o la bandeja, arranca al iniciar sesión y mantiene una conexión saliente con el relé de Desktop Steward; por ahí llega ChatGPT a tu ordenador. No se abre nada en tu red. Si también usas Claude Desktop, la extensión comparte las mismas carpetas, reglas e historial.",
+  "fixH2": "Si algo no funciona",
+  "fix": [
+   "<strong>No hay botón «Crear»</strong>: el modo desarrollador está desactivado (Ajustes → Conectores → Avanzado) o el plan no incluye conectores.",
+   "<strong>«El ordenador está desconectado»</strong> — el ordenador está en reposo o la aplicación Desktop Steward está cerrada. Ábrela y vuelve a intentarlo.",
+   "<strong>«Ese código no funcionó»</strong> — los códigos caducan a los 10 minutos y valen una vez. En el ordenador, abre el panel desde el icono y pulsa <strong>Nuevo código</strong>.",
+   "<strong>ChatGPT no usa el conector</strong>: actívalo para el chat en el menú de herramientas o pídelo explícitamente: «usa Mi ordenador para listar mis Descargas»."
+  ],
+  "proH2": "Precio",
+  "pro": "El acceso remoto que usa ChatGPT forma parte de <a href=\"{pro}\">Desktop Steward Pro</a>: 10 $ al mes, los primeros 7 días gratis en cada ordenador, cancela cuando quieras. Usar Desktop Steward dentro de Claude Desktop sigue siendo gratis.",
+  "finalH2": "Empieza en el ordenador",
+  "finalSub": "Instala la aplicación, pulsa «Activar», conecta ChatGPT con el código.",
+  "finalCta": "Descargar para Mac o Windows"
+ },
+ "footer": {
+  "rights": "© 2026 ED&EU LTD, Escocia. Desktop Steward no está afiliado a Anthropic. Claude es una marca de Anthropic, PBC.",
+  "languages": "Idiomas"
+ }
+}

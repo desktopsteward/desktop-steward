@@ -27,3 +27,21 @@ jobs:
       - name: Relay tests (skipped when relay/ is absent)
         run: |
           if [ -f relay/package.json ]; then cd relay && npm ci && npm test; else echo "no relay in this repo"; fi
+  windows-app:
+    # Private repo only: the tray app and the agent are not part of the public core.
+    runs-on: windows-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - name: Windows installer (skipped when win/ is absent)
+        shell: pwsh
+        run: |
+          if (Test-Path win/build-win.ps1) { npm ci; ./win/build-win.ps1 } else { "no win/ in this repo" }
+      - uses: actions/upload-artifact@v4
+        if: hashFiles('win/build-win.ps1') != ''
+        with:
+          name: windows-installer
+          path: build/win/*.exe
+          if-no-files-found: error

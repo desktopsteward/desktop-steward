@@ -1,0 +1,511 @@
+{
+ "lang": "ko",
+ "dir": "ltr",
+ "name": "한국어",
+ "nav": {
+  "how": "작동 방식",
+  "safety": "안전",
+  "compare": "비교",
+  "faq": "자주 묻는 질문",
+  "guides": "가이드",
+  "pro": "Pro",
+  "download": "다운로드",
+  "security": "보안 모델",
+  "privacy": "개인정보",
+  "contact": "문의",
+  "home": "홈",
+  "chatgpt": "ChatGPT"
+ },
+ "home": {
+  "title": "Desktop Steward — Claude나 ChatGPT에게 안심하고 파일 정리를 맡기세요",
+  "desc": "Desktop Steward는 Claude나 ChatGPT가 파일을 정리하고 찾고 분류하게 해 주는 무료 확장 프로그램입니다. 알기 쉬운 폴더 규칙, 위험한 작업 전 확인 창, 모든 변경의 되돌리기. 터미널은 없습니다.",
+  "pill": "Claude Desktop, 휴대폰의 Claude, ChatGPT 지원 · macOS와 Windows",
+  "h1a": "Claude나 ChatGPT에게 파일 정리를 맡겨도 ",
+  "h1b": "파일 걱정은 없습니다.",
+  "lead": "Desktop Steward는 AI 채팅에 컴퓨터를 조심스럽게 다루는 손을 줍니다. 정리하고, 찾고, 치우고, 위험한 작업 전에는 먼저 묻고, 모든 변경은 되돌릴 수 있습니다. Claude Desktop에 한 번 설치하면, Pro로 휴대폰의 Claude나 ChatGPT에서도 쓸 수 있습니다.",
+  "cta": "Mac 또는 Windows용 다운로드",
+  "cta2": "작동 방식 보기",
+  "trust": [
+   "터미널 없음",
+   "7일간 되돌리기",
+   "오픈소스",
+   "오프라인 작동"
+  ],
+  "demo": [
+   "AI Workspace에 “안녕”이라고 쓴 test.txt 파일을 만들어 줘",
+   "Desktop Steward: 파일 쓰기",
+   "완료: test.txt가 문서/AI Workspace에 있습니다. 7일간 되돌릴 수 있습니다.",
+   "그 파일 삭제해 줘",
+   "Desktop Steward: 파일 삭제",
+   "삭제했습니다. 되찾고 싶을 때를 위해 7일간 보관합니다.",
+   "다시 되돌려 줘",
+   "Desktop Steward: 되돌리기",
+   "test.txt가 문서/AI Workspace로 돌아왔습니다."
+  ],
+  "dialog": {
+   "title": "Desktop Steward",
+   "text": "1개 항목을 삭제할까요? ~/Documents/AI Workspace/test.txt. 7일간 보관되며 되돌릴 수 있습니다.",
+   "deny": "허용 안 함",
+   "allow": "허용"
+  },
+  "choose": {
+   "title": "어떤 채팅을 쓰시나요?",
+   "claude": [
+    "Claude",
+    "Claude Desktop, 휴대폰 앱 또는 브라우저"
+   ],
+   "chatgpt": [
+    "ChatGPT",
+    "Plus, Pro, Business 또는 Enterprise"
+   ]
+  },
+  "diagram": {
+   "clients": [
+    [
+     "Claude Desktop",
+     "이 컴퓨터에서"
+    ],
+    [
+     "Claude 앱",
+     "휴대폰에서"
+    ],
+    [
+     "Claude",
+     "브라우저에서"
+    ],
+    [
+     "ChatGPT",
+     "웹과 앱"
+    ]
+   ],
+   "center": [
+    "Desktop Steward",
+    "내 컴퓨터에서"
+   ],
+   "outputs": [
+    "내 규칙대로, 내 파일",
+    "위험한 작업 전 확인",
+    "7일간 되돌리기"
+   ],
+   "note": "휴대폰, 브라우저, ChatGPT는 릴레이(Pro)를 통해 연결됩니다. Claude Desktop은 다른 것이 필요 없습니다."
+  },
+  "look": {
+   "eyebrow": "이런 모습입니다",
+   "h2": "대화 하나, 확인 창 하나, 되돌리기 하나",
+   "sub": "컴퓨터에서든 휴대폰에서든 같은 대화입니다. 위험한 작업은 항상 컴퓨터의 창에서 멈춥니다."
+  },
+  "how": {
+   "eyebrow": "작동 방식",
+   "h2": "세 단계, 설정 화면 없음",
+   "sub": "브라우저 확장 프로그램처럼 설치하고, 기본 폴더를 그대로 두거나 직접 고르고, 평소 말투로 요청하세요. Mac과 Windows.",
+   "claudeTab": "Claude로",
+   "chatgptTab": "ChatGPT로",
+   "steps": [
+    [
+     "다운로드 후 더블클릭",
+     "Claude Desktop이 한 번의 클릭으로 설치합니다. 터미널도, 설정 파일도, 계정도 필요 없습니다."
+    ],
+    [
+     "폴더 유지 또는 변경",
+     "기본적으로 Claude는 데스크톱, 문서, 다운로드, 사진을 읽을 수 있고, 문서/AI Workspace와 다운로드에서만 파일을 변경할 수 있습니다."
+    ],
+    [
+     "평소 말투로 요청",
+     "“다운로드를 종류와 월별로 정리해 줘.” “중복 사진을 찾아 줘.” 준비된 작업은 + 메뉴에 있습니다."
+    ]
+   ],
+   "chatgptSub": "컴퓨터에 한 번 설치하고, 일회용 코드로 ChatGPT를 연결하면 어디서든 요청할 수 있습니다. 같은 규칙, 같은 확인, 같은 되돌리기.",
+   "chatgptSteps": [
+    [
+     "컴퓨터에 앱 설치",
+     "Desktop Steward 앱은 Claude Desktop 없이 단독으로 실행됩니다. 패널에서 “켜기”를 누르면 코드가 나옵니다."
+    ],
+    [
+     "ChatGPT 연결",
+     "설정 → 커넥터 → 만들기 → 주소 붙여넣기, OAuth 선택, 코드 입력."
+    ],
+    [
+     "요청",
+     "“내 다운로드에 뭐가 있어?” “오늘 스캔한 것들을 PDF 하나로 만들어 줘.” ChatGPT는 컴퓨터에서 작업하고, 확인은 컴퓨터에 남습니다."
+    ]
+   ],
+   "chatgptCta": "ChatGPT 전체 가이드"
+  },
+  "safety": {
+   "eyebrow": "안전 우선",
+   "h2": "실수가 파일의 끝이 되지 않도록 만들었습니다",
+   "sub": "AI는 실수합니다. Desktop Steward는 어떤 실수도 영구적이지 않고, 위험한 작업은 당신 없이는 절대 일어나지 않도록 설계되었습니다.",
+   "cards": [
+    [
+     "평소 말로 된 규칙",
+     "Claude가 읽을 폴더와 변경할 폴더를 직접 고릅니다. 나머지는 Claude에게 존재하지 않습니다."
+    ],
+    [
+     "위험한 작업 전 확인",
+     "삭제, 파일 교체, 많은 파일 이동은 컴퓨터에 확인 창을 띄웁니다. Claude가 대신 클릭할 수 없습니다."
+    ],
+    [
+     "7일간 되돌리기",
+     "변경 전에 이전 버전을 보관합니다. 삭제된 파일은 보관 구역에서 기다립니다. “되돌려 줘”라고 말하면 돌아옵니다."
+    ],
+    [
+     "항상 접근 금지",
+     "비밀번호, 키, 브라우저 데이터, 메일, 시스템 폴더, 더블클릭으로 실행되는 모든 것. 터미널도 네트워크도 없습니다."
+    ],
+    [
+     "모든 작업 내역 패널",
+     "“패널 열어 줘”라고 말하면 되돌리기 버튼이 달린 모든 변경, 활동 기록, 적용 중인 규칙을 볼 수 있습니다. 내 컴퓨터에서만 접근 가능."
+    ]
+   ],
+   "note": "보호하지 못하는 부분까지 포함한 전체 <a href=\"{security}\">보안 모델</a>을 읽어 보세요."
+  },
+  "tasks": {
+   "eyebrow": "준비된 작업",
+   "h2": "+ 메뉴에서 한 번의 클릭",
+   "sub": "모든 작업은 먼저 계획을 보여 주고, 동의한 뒤에만 파일을 옮깁니다.",
+   "cards": [
+    [
+     "다운로드 정리",
+     "파일을 종류와 월별 폴더로 분류합니다."
+    ],
+    [
+     "중복 사진 찾기",
+     "동일한 사진과 낭비되는 용량을 찾습니다."
+    ],
+    [
+     "디스크 공간 확보",
+     "가장 큰 폴더와 파일을 안전한 제안과 함께."
+    ],
+    [
+     "데스크톱 정리",
+     "어질러진 것들을 몇 개의 알맞은 폴더로 옮깁니다."
+    ],
+    [
+     "주제로 문서 찾기",
+     "파일 이름과 PDF·Word 파일 안의 글을 검색합니다."
+    ],
+    [
+     "스캔을 PDF 하나로",
+     "문서 사진이 순서대로 PDF 하나가 됩니다."
+    ],
+    [
+     "압축과 압축 해제",
+     "보내기 위해 폴더를 묶고, 아카이브를 안전하게 풉니다."
+    ],
+    [
+     "날짜로 사진 이름 바꾸기",
+     "드디어 순서대로 정렬됩니다."
+    ]
+   ]
+  },
+  "compare": {
+   "eyebrow": "비교",
+   "h2": "Desktop Steward 대 Desktop Commander",
+   "sub": "Desktop Commander는 개발자를 위한 훌륭한 도구입니다: 터미널, 코드 편집, 서버. Desktop Steward는 그 외 모든 사람을 위한 것입니다. 2026년 10월 기준.",
+   "head": [
+    "기능",
+    "Desktop Steward",
+    "Desktop Commander"
+   ],
+   "rows": [
+    [
+     "설치",
+     "더블클릭",
+     "npx, 설정 파일 또는 Docker",
+     1,
+     0
+    ],
+    [
+     "변경 되돌리기",
+     "예, 7일",
+     "아니요",
+     1,
+     0
+    ],
+    [
+     "삭제 전 확인",
+     "항상, 시스템 대화상자",
+     "아니요",
+     1,
+     0
+    ],
+    [
+     "터미널 접근",
+     "없음, 의도적으로",
+     "있음",
+     0,
+     1
+    ],
+    [
+     "폴더 규칙",
+     "읽기와 변경 구분, 평소 말로",
+     "허용 목록 하나, 터미널로 우회 가능",
+     1,
+     0
+    ],
+    [
+     "휴대폰에서 사용",
+     "예, Pro: 일회용 코드 로그인",
+     "예, Pro",
+     1,
+     1
+    ],
+    [
+     "클라우드",
+     "휴대폰 접근용 선택적 릴레이, 전달만 하고 아무것도 저장하지 않음",
+     "선택적 릴레이, 호출 데이터 임시 저장",
+     1,
+     0
+    ],
+    [
+     "가격",
+     "무료; 휴대폰 접근은 Pro 월 10달러",
+     "무료; 원격 접근은 Pro 월 20달러",
+     1,
+     1
+    ]
+   ]
+  },
+  "faq": {
+   "eyebrow": "자주 묻는 질문",
+   "h2": "자주 받는 질문",
+   "items": [
+    [
+     "Claude Desktop이 필요한가요?",
+     "아니요. Claude Desktop(무료 플랜이면 충분)을 쓴다면 확장 프로그램을, ChatGPT나 휴대폰·브라우저의 Claude를 쓴다면 단독 실행되는 Desktop Steward 앱을 쓰세요."
+    ],
+    [
+     "내 컴퓨터 밖으로 나가는 것이 있나요?",
+     "원격 접근을 켜지 않는 한 없습니다. 로컬에서는 Desktop Steward에 서버도 텔레메트리도 없고, Claude는 채팅에 텍스트를 붙여넣을 때처럼 읽어 달라고 한 것만 봅니다. 원격 접근을 켜면 요청이 Desktop Steward 릴레이를 거치는데, 릴레이는 채팅 앱과 컴퓨터 사이에서 메시지를 전달할 뿐 내용은 전혀 저장하지 않습니다."
+    ],
+    [
+     "Claude가 실수로 내 파일을 지울 수 있나요?",
+     "모든 삭제는 Claude가 클릭할 수 없는 확인 창을 컴퓨터에 띄웁니다. 삭제된 파일은 7일간 보관되며 “되돌려 줘”로 되찾을 수 있습니다."
+    ],
+    [
+     "설치할 때 빨간 “미검증” 표시는 왜 뜨나요?",
+     "Anthropic 디렉터리에 등록되지 않은 모든 확장 프로그램에 Claude Desktop이 표시합니다. 등록을 진행 중입니다."
+    ],
+    [
+     "Windows 버전이 있나요?",
+     "예, 0.1.3 버전부터 있습니다. Windows의 확인 창은 표준 시스템 대화상자입니다."
+    ],
+    [
+     "휴대폰에서 쓸 수 있나요?",
+     "예. 컴퓨터에서 “원격 접근 켜 줘”라고 말하고, 휴대폰의 Claude 앱에서 커넥터를 추가한 뒤 일회용 코드를 입력하세요. 확인은 여전히 컴퓨터에서 이루어집니다. <a href=\"{phone}\">단계별 가이드</a>."
+    ],
+    [
+     "오픈소스인가요?",
+     "예, 핵심은 MIT 라이선스입니다: <a href=\"https://github.com/desktopsteward/desktop-steward\">github.com/desktopsteward/desktop-steward</a>. 보안 모델과 코드는 누구나 검토할 수 있습니다."
+    ]
+   ]
+  },
+  "final": {
+   "h2": "Claude에게 조심스러운 손을 주세요.",
+   "sub": "무료, 오프라인, 모든 것을 되돌릴 수 있습니다.",
+   "cta": "Mac 또는 Windows용 다운로드",
+   "note": "버전 {version} · Claude Desktop용 확장 프로그램 또는 단독 앱"
+  }
+ },
+ "download": {
+  "title": "Desktop Steward 다운로드 — Claude Desktop, ChatGPT, 휴대폰용",
+  "desc": "Desktop Steward 설치: Claude Desktop용 확장 프로그램, 또는 ChatGPT와 웹·휴대폰의 Claude를 위해 단독 실행되는 앱. 무료, 모든 변경을 되돌릴 수 있습니다.",
+  "h1": "다운로드",
+  "lead": "버전 {version}. 설치 방법은 두 가지: Claude Desktop용 확장 프로그램, 또는 단독으로 실행되는 Desktop Steward 앱.",
+  "mac": "Mac용 다운로드 (7 MB)",
+  "win": "Windows용 다운로드 (7 MB)",
+  "note": "Windows의 확인 창은 표준 시스템 대화상자를 사용합니다.",
+  "h2": "세 단계로 설치",
+  "steps": [
+   [
+    "다운로드한 파일을 더블클릭",
+    "Claude Desktop이 열리며 확장 프로그램이 할 수 있는 일을 보여 줍니다. 열리지 않으면 파일을 Claude Desktop 창으로 끌어다 놓으세요."
+   ],
+   [
+    "저장 누르기",
+    "아무것도 입력할 필요가 없습니다. 기본값: 데스크톱, 문서, 다운로드, 사진 읽기; 문서/AI Workspace와 다운로드에서만 파일 변경."
+   ],
+   [
+    "새 대화 시작",
+    "“Desktop Steward 규칙 보여 줘”라고 해 보거나, + 메뉴 → 커넥터 → Desktop Steward에서 추가로 준비된 작업을 여세요."
+   ]
+  ],
+  "uninstallH2": "제거",
+  "uninstall": "확장 프로그램: Claude Desktop → 설정 → 확장 프로그램 → Desktop Steward → 제거. 앱: Mac에서는 메뉴 막대 아이콘으로 종료한 뒤 응용 프로그램의 Desktop Steward를 휴지통으로; Windows에서는 설정 → 앱 → Desktop Steward → 제거. 되돌리기용 사본은 ~/.desktop-steward(Mac) 또는 %USERPROFILE%\\.desktop-steward(Windows)에 있습니다. 아무것도 남기고 싶지 않다면 그 폴더를 삭제하세요.",
+  "whichH2": "무엇을 골라야 하나요?",
+  "which": [
+   "이 컴퓨터에서 Claude Desktop으로 대화한다 → <strong>확장 프로그램</strong>.",
+   "ChatGPT를 쓰거나, 휴대폰·브라우저에서 Claude를 쓴다 → <strong>앱</strong>(Claude Desktop 불필요).",
+   "둘 다 설치해도 됩니다: 같은 폴더, 규칙, 기록을 공유합니다."
+  ],
+  "extH2": "Claude Desktop용 확장 프로그램",
+  "appH2": "Desktop Steward 앱",
+  "appLead": "메뉴 막대(Mac) 또는 트레이(Windows)의 작은 아이콘. 로그인 시 시작되고, 웹이나 휴대폰의 Claude와 ChatGPT가 이 컴퓨터에 닿을 수 있게 유지하며, 코드·규칙·기록·되돌리기가 있는 패널을 브라우저에서 엽니다.",
+  "appMac": "Mac용 앱 다운로드 (96 MB)",
+  "appWin": "Windows용 앱 다운로드 (설치 프로그램)",
+  "appSteps": [
+   [
+    "다운로드한 파일 열기",
+    "Mac: 압축을 풀고 Desktop Steward를 응용 프로그램으로 끌어다 놓은 뒤 엽니다. Windows: 설치 프로그램을 실행합니다. 메뉴 막대나 트레이에 아이콘이 나타나고 브라우저에서 패널이 열립니다."
+   ],
+   [
+    "“켜기” 누르기",
+    "패널에 주소와 일회용 코드, 그리고 Claude와 ChatGPT 각각의 단계별 안내가 표시됩니다."
+   ],
+   [
+    "연결하고 요청하기",
+    "Claude 또는 ChatGPT에서 커넥터를 추가하고 코드를 입력한 뒤 물어보세요: “내 다운로드 폴더에 뭐가 있어?”"
+   ]
+  ],
+  "appNote": "Mac: Apple Silicon 및 Intel, macOS 13 이상. Windows 10/11, 64비트. 원격 접근은 7일 무료, 이후 Pro(월 $10)에 포함됩니다."
+ },
+ "pro": {
+  "title": "Desktop Steward Pro — 휴대폰에서 내 컴퓨터로",
+  "desc": "Desktop Steward Pro는 원격 접근을 추가합니다. 휴대폰의 Claude 앱이나 ChatGPT에서 컴퓨터의 파일을 사용하세요. 월 10달러, 첫 7일 무료, 언제든 해지.",
+  "eyebrow": "Desktop Steward Pro",
+  "h1": "내 컴퓨터를, 휴대폰에서.",
+  "lead": "무료 버전의 모든 기능은 계속 무료입니다. Pro는 원격 접근을 추가합니다. 휴대폰의 Claude 앱, 브라우저의 Claude, ChatGPT에서 컴퓨터의 파일을 요청하세요. 확인은 여전히 컴퓨터에서, 모든 변경은 여전히 되돌릴 수 있습니다.",
+  "price": "10달러",
+  "priceNote": "월 · 첫 7일 무료 · 언제든 해지",
+  "trial": "<strong>모든 컴퓨터는 처음 켠 순간부터 7일간 원격 접근이 무료입니다.</strong> 컴퓨터에서의 체험에는 카드가 필요 없습니다. 끝나면 여기서 구독하세요.",
+  "bullets": [
+   "라이선스 하나로 최대 3대",
+   "Claude(휴대폰, 웹)와 ChatGPT 지원",
+   "릴레이는 전달만 하고 아무것도 저장하지 않음",
+   "언제든 컴퓨터에서 끄면 모든 앱이 한 번에 로그아웃"
+  ],
+  "buyH3": "Pro 구매",
+  "buyNote": "라이선스 키가 이메일로 전송됩니다. 컴퓨터에서 Claude에게 “라이선스 활성화해 줘”라고 말하고 키를 알려 주세요.",
+  "email": "you@example.com",
+  "buy": "7일 무료로 시작",
+  "payNote": "결제는 Stripe. 관리나 해지는 <a href=\"https://relay.desktopsteward.com/billing/portal\">결제 포털</a>에서.",
+  "opening": "결제 페이지 여는 중…",
+  "unavailable": "지금은 결제를 이용할 수 없습니다.",
+  "howH2": "작동 방식",
+  "steps": [
+   [
+    "구매하고 키 받기",
+    "키는 이메일로 오고 감사 페이지에도 표시됩니다."
+   ],
+   [
+    "컴퓨터에서 활성화",
+    "Claude Desktop에서 “라이선스 활성화해 줘 DSW-…”라고 말한 뒤 “원격 접근 켜 줘”."
+   ],
+   [
+    "휴대폰 연결",
+    "Claude 앱에서 커넥터를 추가하고 일회용 코드를 입력하세요. <a href=\"{phone}\">단계별 안내</a>."
+   ]
+  ]
+ },
+ "phone": {
+  "slug": "use-claude-on-your-phone-with-your-computer",
+  "title": "휴대폰의 Claude로 컴퓨터의 파일 사용하기",
+  "desc": "비전문가를 위한 단계별 안내: Desktop Steward에서 원격 접근을 켜고, iPhone이나 Android의 Claude 앱(또는 ChatGPT)을 연결하고, 어디서든 파일을 요청하세요. 확인은 컴퓨터에 남습니다.",
+  "eyebrow": "가이드",
+  "h1": "휴대폰의 Claude로 컴퓨터의 파일 사용하기",
+  "lead": "소파에 있고 노트북은 다른 방에 있습니다. 휴대폰의 Claude에게 컴퓨터에 있는 파일을 찾고, 정리하고, 보내 달라고 하는 방법입니다. 기술적인 단계 없이, 한 번만 5분 정도.",
+  "needH2": "필요한 것",
+  "need": [
+   "Claude Desktop과 <a href=\"{download}\">Desktop Steward</a>가 설치된 Mac 또는 Windows 컴퓨터. 휴대폰에서 쓰는 동안 컴퓨터가 켜져 있고 Claude Desktop이 열려 있어야 합니다.",
+   "휴대폰의 Claude 앱(iPhone 또는 Android), 브라우저의 Claude, 또는 ChatGPT."
+  ],
+  "tip1": "원격 접근은 Desktop Steward 릴레이를 거칩니다. 릴레이는 메시지를 주고받을 뿐 아무것도 저장하지 않습니다. <a href=\"{pro}\">Desktop Steward Pro</a>(월 10달러, 첫 7일 무료)의 일부입니다. 모든 컴퓨터에서 첫 7일은 무료입니다.",
+  "s1H2": "1단계 — 컴퓨터에서: 원격 접근 켜기",
+  "s1": [
+   "Claude Desktop을 열고 새 대화를 시작하세요.",
+   "<strong>“원격 접근 켜 줘”</strong>라고 입력하세요.",
+   "Claude가 두 가지를 알려 줍니다. <code>https://relay.desktopsteward.com/mcp</code> 같은 <strong>주소</strong>와, <code>4821 0375</code> 같은 8자리 <strong>일회용 코드</strong>. 코드는 10분 동안, 앱 하나에만 유효합니다."
+  ],
+  "s1chat": [
+   "원격 접근 켜 줘",
+   "원격 접근이 켜졌습니다. 커넥터 주소: https://relay.desktopsteward.com/mcp<br>일회용 코드: 4821 0375 (10분 유효, 1회 사용). …"
+  ],
+  "s1note": "이 대화를 열어 두세요. 곧 휴대폰에서 코드를 입력합니다.",
+  "s2H2": "2단계 — 휴대폰에서: 커넥터 추가",
+  "s2app": "Claude 앱 (iPhone 또는 Android)",
+  "s2": [
+   "프로필 사진이나 메뉴를 누른 뒤 <strong>설정</strong>을 누르세요.",
+   "<strong>커넥터</strong>를 누른 뒤 <strong>사용자 지정 커넥터 추가</strong>를 누르세요.",
+   "주소 칸에 <code>https://relay.desktopsteward.com/mcp</code>를 정확히 입력하세요. 이름은 “내 컴퓨터”. 인증 칸은 비워 두세요. <strong>추가</strong>를 누르세요.",
+   "휴대폰에 “Claude를 컴퓨터에 연결”이라는 로그인 페이지가 열립니다. 1단계의 8자리를 입력하고 <strong>연결</strong>을 누르세요.",
+   "Claude 앱으로 돌아옵니다. 커넥터가 연결됨으로 표시됩니다."
+  ],
+  "s2web": "<strong>브라우저의 Claude(claude.ai)</strong>: 같은 경로, 설정 → 커넥터 → 사용자 지정 커넥터 추가.",
+  "s2gpt": "<strong>ChatGPT</strong>(Plus, Pro 또는 Business): 설정 → 커넥터 → 만들기. 같은 주소를 MCP 서버로 붙여넣고, 인증으로 <strong>OAuth</strong>를 선택한 뒤 저장하세요. ChatGPT가 로그인 페이지를 열면 코드를 입력하세요. “만들기”가 보이지 않으면 설정 → 커넥터 → 고급에서 개발자 모드를 켜세요.",
+  "s3H2": "3단계 — 요청",
+  "s3chat": [
+   "내 다운로드 폴더에 뭐가 있어?",
+   "휴대폰의 Claude가 컴퓨터의 폴더 목록을 보여 줍니다.",
+   "3월 청구서를 찾아서 합계를 읽어 줘.",
+   "Claude가 컴퓨터를 검색하고 PDF를 열어 답합니다."
+  ],
+  "s3note": "컴퓨터에서와 똑같이 작동합니다. 같은 폴더, 같은 규칙, 모든 변경의 되돌리기.",
+  "okH2": "Claude가 승인을 필요로 할 때",
+  "ok": "삭제, 교체, 많은 파일 이동은 휴대폰이 아니라 <strong>컴퓨터에</strong> 확인 창을 띄웁니다. 컴퓨터에서 떨어져 있으면 휴대폰은 최대 1분 기다린 뒤 컴퓨터가 응답하지 않았다고 알립니다. 의도된 동작입니다. 잃어버린 휴대폰으로는 컴퓨터의 아무것도 지울 수 없습니다.",
+  "fixH2": "문제가 생기면",
+  "fix": [
+   "<strong>“컴퓨터가 오프라인입니다”</strong> — 컴퓨터가 잠자기 중이거나 Claude Desktop이 닫혀 있습니다. 깨우고, Claude Desktop을 열고, 다시 시도하세요.",
+   "<strong>“코드가 맞지 않습니다”</strong> — 코드는 10분 후 만료되고 1회만 쓸 수 있습니다. 컴퓨터에서 <strong>“원격 접근 코드 보여 줘”</strong>라고 말해 새 코드를 받으세요.",
+   "<strong>로그인 페이지가 나타나지 않음</strong> — 주소가 끝의 <code>/mcp</code>까지 정확한지 확인하세요.",
+   "<strong>다른 휴대폰이나 ChatGPT도 쓰려면</strong> — 앱마다 별도의 코드가 필요합니다: “원격 접근 코드 보여 줘”."
+  ],
+  "offH2": "끄기",
+  "off": "컴퓨터에서 <strong>“원격 접근 꺼 줘”</strong>라고 말하세요. 연결된 모든 앱이 한 번에 로그아웃됩니다. 다시 시작하려면 “원격 접근 켜 줘”. 앱들은 새 코드가 필요합니다.",
+  "finalH2": "컴퓨터에서 시작하세요",
+  "finalSub": "Desktop Steward를 설치하고 “원격 접근 켜 줘”라고 말하면 휴대폰에서 파일에 닿을 수 있습니다.",
+  "finalCta": "Mac 또는 Windows용 다운로드"
+ },
+ "chatgpt": {
+  "slug": "chatgpt",
+  "title": "ChatGPT로 컴퓨터의 파일 사용하기 — Desktop Steward",
+  "desc": "ChatGPT 사용자를 위한 명확한 길: 컴퓨터에 Desktop Steward를 설치하고, 일회용 코드로 ChatGPT를 연결하고, 어떤 기기에서든 파일을 요청하세요. 확인은 컴퓨터에 남고, 모든 변경은 되돌릴 수 있습니다.",
+  "eyebrow": "ChatGPT",
+  "h1": "ChatGPT로 컴퓨터의 파일 사용하기",
+  "lead": "ChatGPT는 혼자서는 당신의 디스크를 볼 수 없습니다. Desktop Steward가 조심스러운 손을 줍니다. 당신의 폴더, 당신의 규칙, 위험한 작업 전 확인 창, 그리고 되돌리기. 전체 과정은 다음과 같고, 한 번만 10분 정도 걸립니다.",
+  "needH2": "필요한 것",
+  "need": [
+   "사용하는 동안 켜져 있는 Mac 또는 Windows 컴퓨터.",
+   "커넥터를 지원하는 ChatGPT 요금제: Plus, Pro, Business 또는 Enterprise. (무료 요금제는 아직 사용자 지정 커넥터를 추가할 수 없습니다.)",
+   "컴퓨터의 Desktop Steward 앱: 무료 다운로드, 단독 실행. Claude 계정이 필요 없습니다."
+  ],
+  "s1H2": "1단계 — 컴퓨터에 Desktop Steward 설치",
+  "s1": [
+   "<a href=\"{download}\">Desktop Steward 앱을 다운로드</a>(Mac 또는 Windows)하고 엽니다. 메뉴 막대나 트레이에 아이콘이 나타나고 브라우저에서 패널이 열립니다.",
+   "패널에서 <strong>켜기</strong>를 누르고 <strong>ChatGPT</strong> 탭을 선택합니다.",
+   "<strong>주소</strong>(<code>https://relay.desktopsteward.com/mcp</code>)와 8자리 <strong>일회용 코드</strong>(10분 유효)를 받습니다."
+  ],
+  "s2H2": "2단계 — ChatGPT 연결",
+  "s2": [
+   "ChatGPT에서 <strong>설정 → 커넥터</strong>를 여세요. <strong>만들기</strong> 버튼이 없으면 <strong>고급</strong>을 열고 <strong>개발자 모드</strong>를 켜세요.",
+   "<strong>만들기</strong>를 누르세요. 이름: “내 컴퓨터”. MCP 서버 URL: <code>https://relay.desktopsteward.com/mcp</code>. 인증: <strong>OAuth</strong>. 저장.",
+   "ChatGPT가 Desktop Steward 로그인 페이지를 엽니다. 8자리를 입력하고 <strong>연결</strong>을 누르세요.",
+   "ChatGPT로 돌아와 대화를 시작하고, 도구 메뉴(메시지 칸 옆의 + 또는 “…”)를 열어 “내 컴퓨터”를 켜세요."
+  ],
+  "s3H2": "3단계 — 요청",
+  "s3chat": [
+   "내 다운로드 폴더에 뭐가 있어?",
+   "ChatGPT가 컴퓨터의 폴더 목록을 보여 줍니다.",
+   "오늘 스캔한 세 장을 PDF 하나로 합쳐 줘.",
+   "ChatGPT가 파일을 찾아 페이지 순서를 보여 주고 문서/AI Workspace에 PDF를 만듭니다."
+  ],
+  "s3note": "Claude에서와 같은 폴더와 규칙입니다. 삭제, 교체, 많은 파일 이동은 <strong>컴퓨터에</strong> 확인 창을 띄우고, ChatGPT는 당신의 답을 기다립니다.",
+  "whyH2": "컴퓨터에서 어떻게 동작하나요",
+  "why": "Desktop Steward 앱은 메뉴 막대나 트레이에 상주하고, 로그인 시 시작되며, Desktop Steward 릴레이로 나가는 연결을 유지합니다. ChatGPT는 그 연결을 통해 컴퓨터에 닿습니다. 네트워크에 열리는 것은 없습니다. Claude Desktop도 쓴다면 그쪽 확장 프로그램은 같은 폴더, 규칙, 기록을 공유합니다.",
+  "fixH2": "문제가 생기면",
+  "fix": [
+   "<strong>“만들기” 버튼이 없음</strong> — 개발자 모드가 꺼져 있거나(설정 → 커넥터 → 고급) 요금제에 커넥터가 포함되지 않습니다.",
+   "<strong>“컴퓨터가 오프라인입니다”</strong> — 컴퓨터가 잠자기 중이거나 Desktop Steward 앱이 닫혀 있습니다. 열고 다시 시도하세요.",
+   "<strong>“코드가 맞지 않습니다”</strong> — 코드는 10분 후 만료되고 한 번만 쓸 수 있습니다. 컴퓨터에서 아이콘으로 패널을 열고 <strong>새 코드</strong>를 누르세요.",
+   "<strong>ChatGPT가 커넥터를 쓰지 않음</strong> — 도구 메뉴에서 이 대화에 대해 켜거나, “내 컴퓨터를 써서 내 다운로드를 보여 줘”라고 분명히 요청하세요."
+  ],
+  "proH2": "가격",
+  "pro": "ChatGPT가 사용하는 원격 접근은 <a href=\"{pro}\">Desktop Steward Pro</a>의 일부입니다: 월 10달러, 모든 컴퓨터에서 첫 7일 무료, 언제든 해지. Claude Desktop 안에서 Desktop Steward를 쓰는 것은 계속 무료입니다.",
+  "finalH2": "컴퓨터에서 시작하세요",
+  "finalSub": "앱을 설치하고 “켜기”를 누른 뒤 코드로 ChatGPT를 연결하세요.",
+  "finalCta": "Mac 또는 Windows용 다운로드"
+ },
+ "footer": {
+  "rights": "© 2026 ED&EU LTD, 스코틀랜드. Desktop Steward는 Anthropic과 관련이 없습니다. Claude는 Anthropic, PBC의 상표입니다.",
+  "languages": "언어"
+ }
+}

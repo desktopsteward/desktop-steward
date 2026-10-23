@@ -1,6 +1,6 @@
 {
   "name": "desktop-steward",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Safe hands for your AI on your computer: files, search and apps with plain-language rules and undo.",
   "type": "module",
   "license": "MIT",

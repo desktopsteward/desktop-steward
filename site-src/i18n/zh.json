@@ -1,0 +1,511 @@
+{
+ "lang": "zh",
+ "dir": "ltr",
+ "name": "中文",
+ "nav": {
+  "how": "工作原理",
+  "safety": "安全",
+  "compare": "对比",
+  "faq": "常见问题",
+  "guides": "指南",
+  "pro": "Pro",
+  "download": "下载",
+  "security": "安全模型",
+  "privacy": "隐私",
+  "contact": "联系",
+  "home": "首页",
+  "chatgpt": "ChatGPT"
+ },
+ "home": {
+  "title": "Desktop Steward — 让 Claude 或 ChatGPT 安全地整理你的文件",
+  "desc": "Desktop Steward 是一个免费扩展，让 Claude 或 ChatGPT 整理、查找和归类你的文件。清晰的文件夹规则、任何风险操作前的确认窗口、每次更改都可撤销。没有终端。",
+  "pill": "支持 Claude Desktop、手机上的 Claude 和 ChatGPT · macOS 与 Windows",
+  "h1a": "让 Claude 或 ChatGPT 整理你的文件，",
+  "h1b": "不必为文件担心。",
+  "lead": "Desktop Steward 让 AI 聊天拥有一双在你电脑上谨慎行事的手。它整理、查找、清理，在任何风险操作前先询问，每次更改都可以撤销。在 Claude Desktop 中安装一次；开通 Pro 后，可从手机上的 Claude 或 ChatGPT 使用。",
+  "cta": "下载 Mac 或 Windows 版",
+  "cta2": "看看它如何工作",
+  "trust": [
+   "没有终端",
+   "7 天内可撤销",
+   "开源",
+   "离线可用"
+  ],
+  "demo": [
+   "在 AI Workspace 里创建一个内容为“你好”的 test.txt",
+   "Desktop Steward：写入文件",
+   "完成：test.txt 已放入 文稿/AI Workspace。7 天内可撤销。",
+   "删除这个文件",
+   "Desktop Steward：删除文件",
+   "已删除。它会保留 7 天，以防你想找回。",
+   "把它找回来",
+   "Desktop Steward：撤销",
+   "test.txt 已回到 文稿/AI Workspace。"
+  ],
+  "dialog": {
+   "title": "Desktop Steward",
+   "text": "删除 1 个项目？~/Documents/AI Workspace/test.txt。保留 7 天，可撤销。",
+   "deny": "不允许",
+   "allow": "允许"
+  },
+  "choose": {
+   "title": "你用哪个聊天工具？",
+   "claude": [
+    "Claude",
+    "Claude Desktop、手机应用或浏览器"
+   ],
+   "chatgpt": [
+    "ChatGPT",
+    "Plus、Pro、Business 或 Enterprise"
+   ]
+  },
+  "diagram": {
+   "clients": [
+    [
+     "Claude Desktop",
+     "在这台电脑上"
+    ],
+    [
+     "Claude 应用",
+     "在你的手机上"
+    ],
+    [
+     "Claude",
+     "在浏览器里"
+    ],
+    [
+     "ChatGPT",
+     "网页和应用"
+    ]
+   ],
+   "center": [
+    "Desktop Steward",
+    "在你的电脑上"
+   ],
+   "outputs": [
+    "你的文件，按你的规则",
+    "风险操作前先询问",
+    "7 天内可撤销"
+   ],
+   "note": "手机、浏览器和 ChatGPT 通过中继（Pro）连接。Claude Desktop 不需要任何其他东西。"
+  },
+  "look": {
+   "eyebrow": "它的样子",
+   "h2": "一段对话，一个确认窗口，一次撤销",
+   "sub": "无论在电脑上还是手机上，都是同样的对话。风险操作总是会停在电脑上的一个窗口前。"
+  },
+  "how": {
+   "eyebrow": "工作原理",
+   "h2": "三步，没有设置界面",
+   "sub": "像浏览器扩展一样安装，保留默认文件夹或自己选择，用平常的话提出请求。Mac 与 Windows。",
+   "claudeTab": "用 Claude",
+   "chatgptTab": "用 ChatGPT",
+   "steps": [
+    [
+     "下载并双击",
+     "Claude Desktop 一键安装。没有终端、没有配置文件、不用注册账号。"
+    ],
+    [
+     "保留或更改文件夹",
+     "默认情况下 Claude 可以读取桌面、文稿、下载和图片，只能在 文稿/AI Workspace 和 下载 中更改文件。"
+    ],
+    [
+     "用平常的话提出请求",
+     "“按类型和月份整理我的下载。”“找出重复的照片。”现成的任务就在 + 菜单里。"
+    ]
+   ],
+   "chatgptSub": "在电脑上安装一次，用一次性验证码连接 ChatGPT，随时随地提出请求。同样的规则、同样的确认、同样的撤销。",
+   "chatgptSteps": [
+    [
+     "在电脑上安装应用",
+     "Desktop Steward 应用独立运行，不需要 Claude Desktop。在面板中点击“开启”即可获得代码。"
+    ],
+    [
+     "连接 ChatGPT",
+     "设置 → 连接器 → 创建 → 粘贴地址，选择 OAuth，输入验证码。"
+    ],
+    [
+     "提出请求",
+     "“我的下载里有什么？”“把今天的扫描件合成一个 PDF。”ChatGPT 在电脑上工作，确认仍在电脑上进行。"
+    ]
+   ],
+   "chatgptCta": "完整的 ChatGPT 指南"
+  },
+  "safety": {
+   "eyebrow": "安全第一",
+   "h2": "让任何失误都不会成为文件的终结",
+   "sub": "AI 会犯错。Desktop Steward 的设计让任何错误都不是永久的，危险的操作也绝不会在没有你的情况下发生。",
+   "cards": [
+    [
+     "用平常话写的规则",
+     "由你决定 Claude 可以读取哪些文件夹、更改哪些文件夹。其他一切对它来说都不存在。"
+    ],
+    [
+     "风险操作前先询问",
+     "删除、替换文件或移动大量文件时，会在你的电脑上弹出确认窗口。Claude 无法替你点击。"
+    ],
+    [
+     "7 天内可撤销",
+     "更改前会保留旧版本。被删除的文件会在暂存区等待。说“撤销”，它就回来了。"
+    ],
+    [
+     "永远禁止触碰",
+     "密码、密钥、浏览器数据、邮件、系统文件夹，以及任何双击即运行的东西。没有终端，没有网络。"
+    ],
+    [
+     "一个记录它所做一切的面板",
+     "说“打开面板”，就能看到每次更改及其撤销按钮、活动日志和当前生效的规则。只能从你的电脑访问。"
+    ]
+   ],
+   "note": "请阅读完整的<a href=\"{security}\">安全模型</a>，包括它无法防范的情况。"
+  },
+  "tasks": {
+   "eyebrow": "现成的任务",
+   "h2": "在 + 菜单里一键完成",
+   "sub": "每个任务都先给你看计划，只有你同意后才会移动文件。",
+   "cards": [
+    [
+     "整理下载",
+     "按类型和月份把文件分到文件夹里。"
+    ],
+    [
+     "查找重复照片",
+     "找出完全相同的图片以及它们浪费的空间。"
+    ],
+    [
+     "释放磁盘空间",
+     "最大的文件夹和文件，附带安全建议。"
+    ],
+    [
+     "整理桌面",
+     "把杂乱的东西移进几个合理的文件夹。"
+    ],
+    [
+     "按主题查找文档",
+     "搜索文件名以及 PDF 和 Word 文件里的文字。"
+    ],
+    [
+     "扫描件合成一个 PDF",
+     "文档的照片按顺序合成一个 PDF。"
+    ],
+    [
+     "压缩与解压",
+     "把文件夹打包以便发送，安全地解压归档。"
+    ],
+    [
+     "按日期重命名照片",
+     "让它们终于能按顺序排列。"
+    ]
+   ]
+  },
+  "compare": {
+   "eyebrow": "对比",
+   "h2": "Desktop Steward 与 Desktop Commander",
+   "sub": "Desktop Commander 是开发者的好工具：终端、代码编辑、服务器。Desktop Steward 面向其他所有人。截至 2026 年 10 月。",
+   "head": [
+    "功能",
+    "Desktop Steward",
+    "Desktop Commander"
+   ],
+   "rows": [
+    [
+     "安装",
+     "双击",
+     "npx、配置文件或 Docker",
+     1,
+     0
+    ],
+    [
+     "撤销更改",
+     "有，7 天",
+     "无",
+     1,
+     0
+    ],
+    [
+     "删除前询问",
+     "总是，系统对话框",
+     "无",
+     1,
+     0
+    ],
+    [
+     "终端访问",
+     "无，刻意为之",
+     "有",
+     0,
+     1
+    ],
+    [
+     "文件夹规则",
+     "读取与更改分开，用平常话表达",
+     "一个允许列表，终端可绕过",
+     1,
+     0
+    ],
+    [
+     "从手机使用",
+     "有，Pro：一次性验证码登录",
+     "有，Pro",
+     1,
+     1
+    ],
+    [
+     "云端",
+     "可选的手机访问中继，只转发，不存储任何内容",
+     "可选中继，调用数据临时存储",
+     1,
+     0
+    ],
+    [
+     "价格",
+     "免费；手机访问 Pro 每月 10 美元",
+     "免费；远程访问 Pro 每月 20 美元",
+     1,
+     1
+    ]
+   ]
+  },
+  "faq": {
+   "eyebrow": "常见问题",
+   "h2": "大家常问的问题",
+   "items": [
+    [
+     "需要 Claude Desktop 吗？",
+     "不需要。用 Claude Desktop（免费套餐即可）就装扩展；用 ChatGPT，或在手机、浏览器里用 Claude，就装独立运行的 Desktop Steward 应用。"
+    ],
+    [
+     "有什么会离开我的电脑吗？",
+     "除非你打开远程访问，否则没有。本地使用时，Desktop Steward 没有服务器也没有遥测；Claude 只看到你让它读取的内容，就像你把文字粘贴进聊天一样。打开远程访问后，你的请求会经过 Desktop Steward 中继，中继只在聊天应用和你的电脑之间传递消息，不存储任何内容。"
+    ],
+    [
+     "Claude 会误删我的文件吗？",
+     "每次删除都会在你的电脑上弹出 Claude 无法点击的确认窗口。被删除的文件保留 7 天，说“撤销”即可找回。"
+    ],
+    [
+     "安装时为什么有红色的“未验证”提示？",
+     "凡是未列入 Anthropic 目录的扩展，Claude Desktop 都会这样提示。我们正在申请收录。"
+    ],
+    [
+     "有 Windows 版本吗？",
+     "有，从 0.1.3 版本开始。Windows 上的确认窗口是标准的系统对话框。"
+    ],
+    [
+     "可以从手机使用吗？",
+     "可以。在电脑上说“打开远程访问”，在手机的 Claude 应用里添加连接器并输入一次性验证码。确认仍然在电脑上进行。<a href=\"{phone}\">分步指南</a>。"
+    ],
+    [
+     "它是开源的吗？",
+     "是的，核心采用 MIT 许可证：<a href=\"https://github.com/desktopsteward/desktop-steward\">github.com/desktopsteward/desktop-steward</a>。安全模型和代码都公开可查。"
+    ]
+   ]
+  },
+  "final": {
+   "h2": "给 Claude 一双谨慎的手。",
+   "sub": "免费、离线、一切可撤销。",
+   "cta": "下载 Mac 或 Windows 版",
+   "note": "版本 {version} · Claude Desktop 扩展或独立应用"
+  }
+ },
+ "download": {
+  "title": "下载 Desktop Steward — 适用于 Claude Desktop、ChatGPT 和手机",
+  "desc": "安装 Desktop Steward：Claude Desktop 扩展，或为 ChatGPT 和网页版、手机版 Claude 独立运行的应用。免费，每次更改都可撤销。",
+  "h1": "下载",
+  "lead": "版本 {version}。两种安装方式：Claude Desktop 的扩展，或独立运行的 Desktop Steward 应用。",
+  "mac": "下载 Mac 版（7 MB）",
+  "win": "下载 Windows 版（7 MB）",
+  "note": "Windows 上的确认窗口使用标准系统对话框。",
+  "h2": "三步安装",
+  "steps": [
+   [
+    "双击下载的文件",
+    "Claude Desktop 会打开并展示该扩展能做什么。如果没有打开，把文件拖进 Claude Desktop 窗口。"
+   ],
+   [
+    "点击保存",
+    "不需要填写任何内容。默认：读取桌面、文稿、下载、图片；只在 文稿/AI Workspace 和 下载 中更改文件。"
+   ],
+   [
+    "开始新对话",
+    "试试“给我看 Desktop Steward 的规则”，或打开 + 菜单 → 连接器 → 从 Desktop Steward 添加，使用现成的任务。"
+   ]
+  ],
+  "uninstallH2": "卸载",
+  "uninstall": "扩展：Claude Desktop → 设置 → 扩展 → Desktop Steward → 卸载。应用：Mac 上从菜单栏图标退出，再把“应用程序”里的 Desktop Steward 移到废纸篓；Windows 上打开 设置 → 应用 → Desktop Steward → 卸载。用于撤销的副本保存在 ~/.desktop-steward（Mac）或 %USERPROFILE%\\.desktop-steward（Windows）；想不留痕迹就删除该文件夹。",
+  "whichH2": "我该选哪一个？",
+  "which": [
+   "你在这台电脑上用 Claude Desktop 聊天 → <strong>扩展</strong>。",
+   "你用 ChatGPT，或在手机、浏览器里用 Claude → <strong>应用</strong>（不需要 Claude Desktop）。",
+   "两者可以同时安装：共用同样的文件夹、规则和历史。"
+  ],
+  "extH2": "Claude Desktop 扩展",
+  "appH2": "Desktop Steward 应用",
+  "appLead": "菜单栏（Mac）或托盘（Windows）里的一个小图标。登录时自动启动，让网页版或手机上的 Claude 和 ChatGPT 能连到这台电脑，并在浏览器中打开一个面板：代码、规则、历史和撤销都在那里。",
+  "appMac": "下载 Mac 版应用（96 MB）",
+  "appWin": "下载 Windows 版应用（安装程序）",
+  "appSteps": [
+   [
+    "打开下载的文件",
+    "Mac：解压，把 Desktop Steward 拖到“应用程序”并打开。Windows：运行安装程序。图标出现在菜单栏或托盘，面板在浏览器中打开。"
+   ],
+   [
+    "点击“开启”",
+    "面板显示地址和一次性代码，以及针对 Claude 和 ChatGPT 的分步说明。"
+   ],
+   [
+    "连接并提问",
+    "在 Claude 或 ChatGPT 中添加连接器，输入代码，然后问：“我的下载文件夹里有什么？”"
+   ]
+  ],
+  "appNote": "Mac：Apple 芯片和 Intel，macOS 13 或更新。Windows 10/11，64 位。远程访问前 7 天免费，之后包含在 Pro（每月 10 美元）中。"
+ },
+ "pro": {
+  "title": "Desktop Steward Pro — 用手机访问你的电脑",
+  "desc": "Desktop Steward Pro 增加远程访问：从手机上的 Claude 应用或 ChatGPT 使用电脑上的文件。每月 10 美元，前 7 天免费，随时取消。",
+  "eyebrow": "Desktop Steward Pro",
+  "h1": "你的电脑，用手机就能访问。",
+  "lead": "免费版的一切仍然免费。Pro 增加远程访问：向手机上的 Claude 应用、浏览器里的 Claude 或 ChatGPT 索取你电脑上的文件。确认仍在电脑上进行，每次更改仍可撤销。",
+  "price": "10 美元",
+  "priceNote": "每月 · 前 7 天免费 · 随时取消",
+  "trial": "<strong>每台电脑从首次开启起都有 7 天免费远程访问。</strong>电脑上的试用无需银行卡；试用结束后在此订阅。",
+  "bullets": [
+   "一个许可证最多 3 台电脑",
+   "支持 Claude（手机、网页）和 ChatGPT",
+   "中继只转发消息，不存储任何内容",
+   "随时在电脑上关闭，所有应用同时退出登录"
+  ],
+  "buyH3": "获取 Pro",
+  "buyNote": "许可证密钥会通过邮件发送。在电脑上告诉 Claude “激活许可证”并给出密钥。",
+  "email": "you@example.com",
+  "buy": "开始 7 天免费试用",
+  "payNote": "通过 Stripe 付款。在<a href=\"https://relay.desktopsteward.com/billing/portal\">账单门户</a>管理或取消。",
+  "opening": "正在打开结账页面…",
+  "unavailable": "结账暂时不可用。",
+  "howH2": "工作原理",
+  "steps": [
+   [
+    "购买，获取密钥",
+    "密钥通过邮件送达，并显示在感谢页面上。"
+   ],
+   [
+    "在电脑上激活",
+    "在 Claude Desktop 里说“激活许可证 DSW-…”，然后说“打开远程访问”。"
+   ],
+   [
+    "连接手机",
+    "在 Claude 应用里添加连接器并输入一次性验证码。<a href=\"{phone}\">分步说明</a>。"
+   ]
+  ]
+ },
+ "phone": {
+  "slug": "use-claude-on-your-phone-with-your-computer",
+  "title": "在手机上用 Claude 访问电脑里的文件",
+  "desc": "为非技术用户准备的分步指南：在 Desktop Steward 里打开远程访问，连接 iPhone 或 Android 上的 Claude 应用（或 ChatGPT），随时随地索取文件。确认留在电脑上。",
+  "eyebrow": "指南",
+  "h1": "在手机上用 Claude 访问电脑里的文件",
+  "lead": "你在沙发上，笔记本在另一个房间。这里教你如何让手机上的 Claude 查找、整理或发送电脑里的文件。没有技术步骤，一次只需五分钟左右。",
+  "needH2": "你需要什么",
+  "need": [
+   "一台装有 Claude Desktop 和 <a href=\"{download}\">Desktop Steward</a> 的 Mac 或 Windows 电脑。从手机使用期间，电脑必须开着并且 Claude Desktop 处于打开状态。",
+   "手机上的 Claude 应用（iPhone 或 Android）、浏览器里的 Claude，或 ChatGPT。"
+  ],
+  "tip1": "远程访问经过 Desktop Steward 中继，它只来回传递消息，不存储任何内容。它是 <a href=\"{pro}\">Desktop Steward Pro</a>（每月 10 美元，前 7 天免费）的一部分。每台电脑前 7 天免费。",
+  "s1H2": "第 1 步 — 在电脑上：打开远程访问",
+  "s1": [
+   "打开 Claude Desktop，开始一个新对话。",
+   "输入：<strong>“打开远程访问”</strong>。",
+   "Claude 会回复两样东西：一个形如 <code>https://relay.desktopsteward.com/mcp</code> 的<strong>地址</strong>，以及一个 8 位<strong>一次性验证码</strong>，例如 <code>4821 0375</code>。验证码 10 分钟内有效，只能用于一个应用。"
+  ],
+  "s1chat": [
+   "打开远程访问",
+   "远程访问已开启。连接器地址：https://relay.desktopsteward.com/mcp<br>一次性验证码：4821 0375（10 分钟内有效，仅用一次）。…"
+  ],
+  "s1note": "保持这个对话打开；稍后你要在手机上输入验证码。",
+  "s2H2": "第 2 步 — 在手机上：添加连接器",
+  "s2app": "Claude 应用（iPhone 或 Android）",
+  "s2": [
+   "点击你的头像或菜单，然后点击<strong>设置</strong>。",
+   "点击<strong>连接器</strong>，再点击<strong>添加自定义连接器</strong>。",
+   "在地址栏准确输入 <code>https://relay.desktopsteward.com/mcp</code>。命名为“我的电脑”。身份验证栏留空。点击<strong>添加</strong>。",
+   "手机会打开标题为“将 Claude 连接到你的电脑”的登录页面。输入第 1 步的 8 位数字，点击<strong>连接</strong>。",
+   "回到 Claude 应用。连接器显示为已连接。"
+  ],
+  "s2web": "<strong>浏览器里的 Claude（claude.ai）</strong>：同样的路径，设置 → 连接器 → 添加自定义连接器。",
+  "s2gpt": "<strong>ChatGPT</strong>（Plus、Pro 或 Business）：设置 → 连接器 → 创建。把同一个地址作为 MCP 服务器粘贴进去，身份验证选择 <strong>OAuth</strong>，保存。当 ChatGPT 打开登录页面时，输入验证码。如果看不到“创建”，请在 设置 → 连接器 → 高级 中打开开发者模式。",
+  "s3H2": "第 3 步 — 提出请求",
+  "s3chat": [
+   "我的下载文件夹里有什么？",
+   "手机上的 Claude 列出电脑上该文件夹的内容。",
+   "找到三月的发票并念出总额。",
+   "Claude 搜索电脑，打开 PDF 并回答。"
+  ],
+  "s3note": "一切都和在电脑上一样：同样的文件夹、同样的规则、每次更改都可撤销。",
+  "okH2": "当 Claude 需要你确认时",
+  "ok": "删除、替换或移动大量文件时，确认窗口会在<strong>电脑上</strong>弹出，而不是手机上。如果你不在电脑旁，手机会等待最多一分钟，然后提示电脑没有响应。这是有意为之：丢失的手机无法删除你电脑上的任何东西。",
+  "fixH2": "如果出了问题",
+  "fix": [
+   "<strong>“电脑离线”</strong> — 电脑在睡眠或 Claude Desktop 已关闭。唤醒电脑，打开 Claude Desktop，再试一次。",
+   "<strong>“验证码无效”</strong> — 验证码 10 分钟后过期且只能用一次。在电脑上说<strong>“显示远程访问验证码”</strong>获取新的。",
+   "<strong>登录页面一直不出现</strong> — 检查地址是否完全正确，末尾带 <code>/mcp</code>。",
+   "<strong>另一部手机或 ChatGPT 也要用</strong> — 每个应用都需要自己的验证码：“显示远程访问验证码”。"
+  ],
+  "offH2": "关闭",
+  "off": "在电脑上说<strong>“关闭远程访问”</strong>。所有已连接的应用会同时退出登录。说“打开远程访问”可重新开始；各应用需要新的验证码。",
+  "finalH2": "从电脑开始",
+  "finalSub": "安装 Desktop Steward，说“打开远程访问”，你的手机就能访问你的文件。",
+  "finalCta": "下载 Mac 或 Windows 版"
+ },
+ "chatgpt": {
+  "slug": "chatgpt",
+  "title": "用 ChatGPT 访问电脑里的文件 — Desktop Steward",
+  "desc": "为 ChatGPT 用户准备的清晰路径：在电脑上安装 Desktop Steward，用一次性验证码连接 ChatGPT，从任何设备索取你的文件。确认留在电脑上，每次更改都可撤销。",
+  "eyebrow": "ChatGPT",
+  "h1": "用 ChatGPT 访问电脑里的文件",
+  "lead": "ChatGPT 自己看不到你的磁盘。Desktop Steward 给它一双谨慎的手：你的文件夹、你的规则、任何风险操作前的确认窗口，以及撤销。完整路径如下，一次只需十分钟左右。",
+  "needH2": "你需要什么",
+  "need": [
+   "一台使用期间保持开机的 Mac 或 Windows 电脑。",
+   "带连接器功能的 ChatGPT 套餐：Plus、Pro、Business 或 Enterprise。（免费版暂时无法添加自定义连接器。）",
+   "电脑上的 Desktop Steward 应用：免费下载，独立运行。不需要 Claude 账号。"
+  ],
+  "s1H2": "第 1 步 — 在电脑上安装 Desktop Steward",
+  "s1": [
+   "<a href=\"{download}\">下载 Desktop Steward 应用</a>（Mac 或 Windows）并打开。图标出现在菜单栏或托盘，面板在浏览器中打开。",
+   "在面板中点击<strong>开启</strong>，选择 <strong>ChatGPT</strong> 标签。",
+   "你会得到一个<strong>地址</strong>（<code>https://relay.desktopsteward.com/mcp</code>）和一个 8 位<strong>一次性代码</strong>，有效 10 分钟。"
+  ],
+  "s2H2": "第 2 步 — 连接 ChatGPT",
+  "s2": [
+   "在 ChatGPT 中打开<strong>设置 → 连接器</strong>。如果没有<strong>创建</strong>按钮，打开<strong>高级</strong>并开启<strong>开发者模式</strong>。",
+   "点击<strong>创建</strong>。名称：“我的电脑”。MCP 服务器 URL：<code>https://relay.desktopsteward.com/mcp</code>。身份验证：<strong>OAuth</strong>。保存。",
+   "ChatGPT 会打开 Desktop Steward 登录页面。输入 8 位数字，点击<strong>连接</strong>。",
+   "回到 ChatGPT，开始一个对话，打开工具菜单（消息框旁的 + 或“…”），打开“我的电脑”。"
+  ],
+  "s3H2": "第 3 步 — 提出请求",
+  "s3chat": [
+   "我的下载文件夹里有什么？",
+   "ChatGPT 列出电脑上该文件夹的内容。",
+   "把今天的三份扫描件合成一个 PDF。",
+   "ChatGPT 找到它们，显示页面顺序，并在 文稿/AI Workspace 中创建 PDF。"
+  ],
+  "s3note": "和 Claude 中同样的文件夹和规则。删除、替换或移动大量文件会在<strong>电脑上</strong>弹出确认窗口；ChatGPT 会等待你的回答。",
+  "whyH2": "它在电脑上如何运行",
+  "why": "Desktop Steward 应用驻留在菜单栏或托盘，登录时启动，并保持一条到 Desktop Steward 中继的出站连接；ChatGPT 通过它连到你的电脑。你的网络上不会打开任何端口。如果你也用 Claude Desktop，那里的扩展共用同样的文件夹、规则和历史。",
+  "fixH2": "如果出了问题",
+  "fix": [
+   "<strong>没有“创建”按钮</strong> — 开发者模式已关闭（设置 → 连接器 → 高级），或者套餐不包含连接器。",
+   "<strong>“电脑离线”</strong> — 电脑在睡眠，或 Desktop Steward 应用已关闭。打开后再试。",
+   "<strong>“代码无效”</strong> — 代码 10 分钟后过期，且只能用一次。在电脑上从图标打开面板，点击<strong>新代码</strong>。",
+   "<strong>ChatGPT 不使用连接器</strong> — 在工具菜单中为该对话打开它，或者明确要求：“用我的电脑列出我的下载”。"
+  ],
+  "proH2": "价格",
+  "pro": "ChatGPT 使用的远程访问是 <a href=\"{pro}\">Desktop Steward Pro</a> 的一部分：每月 10 美元，每台电脑前 7 天免费，随时取消。在 Claude Desktop 里使用 Desktop Steward 仍然免费。",
+  "finalH2": "从电脑开始",
+  "finalSub": "安装应用，点击“开启”，用代码连接 ChatGPT。",
+  "finalCta": "下载 Mac 或 Windows 版"
+ },
+ "footer": {
+  "rights": "© 2026 ED&EU LTD，苏格兰。Desktop Steward 与 Anthropic 无关联。Claude 是 Anthropic, PBC 的商标。",
+  "languages": "语言"
+ }
+}
