@@ -84,7 +84,7 @@ test("history lists changes with undo ids; prompts carry the task cards", async 
 
 test("show_rules describes zones and limits in plain words", async () => {
   const r = await call("show_rules", {});
-  assert.match(r.text, /Simple: files only, no terminal/); assert.match(r.text, /Always asks first: deleting anything/); assert.match(r.text, /undone for 7 days/);
+  assert.match(r.text, /Simple: ordinary files only; no hidden files, no programs or scripts/); assert.match(r.text, /Always asks first: deleting anything/); assert.match(r.text, /undone for 7 days/);
 });
 
 test("edit_file refuses when the text count does not match", async () => {

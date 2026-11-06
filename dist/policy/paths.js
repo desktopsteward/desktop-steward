@@ -152,12 +152,11 @@ export async function requireWritable(p, cfg) {
         }
     }
     const rel = path.relative(root, c.path);
-    if (cfg.mode === "simple") {
-        if (rel.split(/[\\/]/).some((part) => part.startsWith(".")))
-            throw new PolicyError(`${pretty(c.path)} is a hidden file or folder; the AI does not change hidden items.`);
-        if (isExecutableName(c.path))
-            throw new PolicyError(`${pretty(c.path)} is a program or script; the AI does not create or change programs. Use a plain text, document or data file instead.`);
-    }
+    // Simple: no hidden items, no programs. Standard: hidden items allowed, still no programs. Expert: both (programs are still never run).
+    if (cfg.mode === "simple" && rel.split(/[\\/]/).some((part) => part.startsWith(".")))
+        throw new PolicyError(`${pretty(c.path)} is a hidden file or folder; the AI does not change hidden items in Simple mode.`);
+    if (cfg.mode !== "expert" && isExecutableName(c.path))
+        throw new PolicyError(`${pretty(c.path)} is a program or script; the AI does not create or change programs outside Expert mode. Use a plain text, document or data file instead.`);
     const st = await fs.lstat(c.path).catch(() => null);
     if (st?.isSymbolicLink())
         throw new PolicyError(`${pretty(c.path)} is a link to another place and is left alone.`);

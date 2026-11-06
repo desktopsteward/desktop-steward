@@ -1,7 +1,7 @@
 {
   "name": "desktop-steward",
   "displayName": "Desktop Steward",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "icon": "./.claude-plugin/icon.png",
   "description": "Safe hands for Claude on your computer: tidy, find and organize files with plain folder rules, a confirmation window before anything risky, and undo for every change. No terminal.",
   "author": {

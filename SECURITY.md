@@ -40,3 +40,10 @@ Limits: 200 items per operation, 20 MB per written file, no replacing files over
 ## Reporting
 
 Send security reports to the address on the website. Reports are acknowledged, fixed and credited.
+
+## Headless computers (demo box only)
+
+On Linux there is no native confirmation dialog, so risky actions (delete, replace, bulk move) are refused. The owner of a
+machine can set `DESKTOP_STEWARD_HEADLESS_APPROVE=1` to approve them automatically; the switch is read only on Linux and
+exists for the always-on sample computer that directory reviewers test against. The model cannot set it. Do not use it on a
+computer with real data.

@@ -27,7 +27,7 @@ async function rg(args, cwd, maxBytes = 200_000) {
 }
 export function registerSearchTools(ctx) {
     const { server, cfg } = ctx;
-    server.registerTool("search_files", {
+    server.registerTool("search_files", { annotations: { readOnlyHint: true, openWorldHint: false },
         title: "Search files",
         description: "Finds files by name (part of the name, case-insensitive) or by text inside them. Searches only the folders opened to the AI. Hidden files and node_modules are skipped.",
         inputSchema: {

@@ -4,7 +4,8 @@ import { recentActivity } from "../activity/log.js";
 import { run, type Ctx } from "./shared.js";
 
 export function describeRules(cfg: Ctx["cfg"]): string {
-  const modeText = { simple: "Simple: files only, no terminal.", standard: "Standard: files plus approved commands.", expert: "Expert: full access with undo." }[cfg.mode];
+  // Same meaning as the mode labels in the panel. No mode has a terminal or runs programs.
+  const modeText = { simple: "Simple: ordinary files only; no hidden files, no programs or scripts.", standard: "Standard: ordinary files and hidden files; no programs or scripts.", expert: "Expert: any file in the opened folders, including programs and scripts (never run), except system files and secrets." }[cfg.mode];
   return [
     `Mode — ${modeText}`,
     `The AI can read and search: ${cfg.readFolders.map(pretty).join(", ")}`,
@@ -20,7 +21,7 @@ export function registerHistoryTools(ctx: Ctx): void {
 
   server.registerTool(
     "undo",
-    { title: "Undo", description: "Reverts the last change made by the AI, or a specific one by its undo id. Works for written, edited, moved and deleted files.", inputSchema: { id: z.string().optional() } },
+    { annotations: { readOnlyHint: false, destructiveHint: false, openWorldHint: false }, title: "Undo", description: "Reverts the last change made by the AI, or a specific one by its undo id. Works for written, edited, moved and deleted files.", inputSchema: { id: z.string().optional() } },
     async ({ id }) =>
       run("undo", id ? `undo ${id}` : "undo last change", async () => {
         const { entry, lines } = await journal.undo(id);
@@ -30,7 +31,7 @@ export function registerHistoryTools(ctx: Ctx): void {
 
   server.registerTool(
     "history",
-    { title: "What the AI did", description: "Lists recent changes with their undo ids, and recent activity.", inputSchema: { limit: z.number().int().min(1).max(100).default(20) } },
+    { annotations: { readOnlyHint: true, openWorldHint: false }, title: "What the AI did", description: "Lists recent changes with their undo ids, and recent activity.", inputSchema: { limit: z.number().int().min(1).max(100).default(20) } },
     async ({ limit }) =>
       run("history", "show history", async () => {
         const entries = await journal.list(limit);
@@ -46,7 +47,7 @@ export function registerHistoryTools(ctx: Ctx): void {
 
   server.registerTool(
     "show_rules",
-    { title: "Show the rules", description: "Explains in plain words what the AI may and may not do on this computer right now.", inputSchema: {} },
+    { annotations: { readOnlyHint: true, openWorldHint: false }, title: "Show the rules", description: "Explains in plain words what the AI may and may not do on this computer right now.", inputSchema: {} },
     async () => run("show_rules", "show rules", async () => describeRules(cfg)),
   );
 }

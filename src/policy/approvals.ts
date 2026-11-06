@@ -31,6 +31,9 @@ export async function confirm(server: McpServer, question: string): Promise<bool
     }
   }
   const native = await nativeDialog(question);
+  // A computer with no way to show a dialog (Linux) refuses risky actions, unless its owner runs it as a demo box
+  // (DESKTOP_STEWARD_HEADLESS_APPROVE=1, used for the directory reviewers' sample computer). Never read on macOS/Windows.
+  if (native === null && process.env.DESKTOP_STEWARD_HEADLESS_APPROVE === "1" && process.platform === "linux") return true;
   if (native !== null) return native;
   throw new ApprovalRequired(`${question} This step needs the user's OK, but there is no way to ask them from here. Tell the user to do it themselves or to enable confirmations in the extension settings.`);
 }

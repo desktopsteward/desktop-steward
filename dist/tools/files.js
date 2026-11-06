@@ -45,7 +45,7 @@ async function readAsText(p) {
 }
 export function registerFileTools(ctx) {
     const { server, cfg, journal } = ctx;
-    server.registerTool("list_folder", {
+    server.registerTool("list_folder", { annotations: { readOnlyHint: true, openWorldHint: false },
         title: "List a folder",
         description: "Shows files and sub-folders with sizes and dates. Use depth 2–3 to see inside sub-folders. Only folders the user opened to the AI are visible.",
         inputSchema: { path: z.string().describe("Folder path, e.g. ~/Downloads"), depth: z.number().int().min(1).max(4).default(1) },
@@ -90,7 +90,7 @@ export function registerFileTools(ctx) {
         await walk(root, 0);
         return `${pretty(root)}\n${lines.join("\n") || "(empty)"}`;
     }));
-    server.registerTool("read_file", {
+    server.registerTool("read_file", { annotations: { readOnlyHint: true, openWorldHint: false },
         title: "Read a file",
         description: "Reads text files, PDFs and Word documents as text, and shows images. Large files come in pages: use offset and limit (in lines).",
         inputSchema: { path: z.string(), offset: z.number().int().min(0).default(0), limit: z.number().int().min(1).max(2000).default(400) },
@@ -121,7 +121,7 @@ export function registerFileTools(ctx) {
         const more = offset + limit < all.length ? `\n… ${all.length - offset - limit} more lines. Call again with offset ${offset + limit}.` : "";
         return `${pretty(real)} (lines ${offset + 1}–${offset + page.length} of ${all.length})\n${page.join("\n")}${more}`;
     }));
-    server.registerTool("write_file", {
+    server.registerTool("write_file", { annotations: { readOnlyHint: false, destructiveHint: false, idempotentHint: true, openWorldHint: false },
         title: "Write a file",
         description: "Creates or replaces a text file inside the folders opened for changes. Replacing an existing file asks the user first; the old version is kept so it can be undone.",
         inputSchema: { path: z.string(), content: z.string(), mode: z.enum(["rewrite", "append"]).default("rewrite") },
@@ -152,7 +152,7 @@ export function registerFileTools(ctx) {
         await journal.record({ id, action: "write", summary: `${existed ? "Changed" : "Created"} ${pretty(real)}`, items: [item] });
         return `${existed ? "Updated" : "Created"} ${pretty(real)} (${human(Buffer.byteLength(content))}). Undo id: ${id}`;
     }));
-    server.registerTool("edit_file", {
+    server.registerTool("edit_file", { annotations: { readOnlyHint: false, destructiveHint: false, openWorldHint: false },
         title: "Edit part of a file",
         description: "Replaces an exact piece of text in a file with new text. The piece must appear exactly expected_count times. The old version is kept for undo.",
         inputSchema: { path: z.string(), find: z.string(), replace: z.string(), expected_count: z.number().int().min(1).default(1) },
@@ -175,7 +175,7 @@ export function registerFileTools(ctx) {
         await journal.record({ id, action: "edit", summary: `Edited ${pretty(real)}`, items: [item] });
         return `Edited ${pretty(real)}: replaced ${count} occurrence(s). Undo id: ${id}`;
     }));
-    server.registerTool("create_folder", { title: "Create a folder", description: "Creates a folder (and parents) inside the folders opened for changes.", inputSchema: { path: z.string() } }, async ({ path: p }) => run("create_folder", `create folder ${p}`, async () => {
+    server.registerTool("create_folder", { annotations: { readOnlyHint: false, destructiveHint: false, idempotentHint: true, openWorldHint: false }, title: "Create a folder", description: "Creates a folder (and parents) inside the folders opened for changes.", inputSchema: { path: z.string() } }, async ({ path: p }) => run("create_folder", `create folder ${p}`, async () => {
         const real = await requireWritable(p, cfg);
         if (await fs.stat(real).then(() => true, () => false))
             return `${pretty(real)} already exists.`;
@@ -184,7 +184,7 @@ export function registerFileTools(ctx) {
         await journal.record({ id, action: "mkdir", summary: `Created folder ${pretty(real)}`, items: [{ path: real }] });
         return `Created folder ${pretty(real)}. Undo id: ${id}`;
     }));
-    server.registerTool("move_files", {
+    server.registerTool("move_files", { annotations: { readOnlyHint: false, destructiveHint: false, openWorldHint: false },
         title: "Move or rename files",
         description: `Moves or renames files and folders. Never overwrites. Moving more than ${cfg.confirmThreshold} items asks the user first. Every move can be undone.`,
         inputSchema: { moves: z.array(z.object({ from: z.string(), to: z.string() })).min(1).max(cfg.maxFilesPerOperation) },
@@ -220,7 +220,7 @@ export function registerFileTools(ctx) {
         await journal.record({ id, action: "move", summary: `Moved ${items.length} item(s)`, items });
         return `Moved ${items.length} item(s). Undo id: ${id}`;
     }));
-    server.registerTool("delete_files", {
+    server.registerTool("delete_files", { annotations: { readOnlyHint: false, destructiveHint: true, openWorldHint: false },
         title: "Delete files",
         description: "Deletes files or folders. Always asks the user first. Nothing is lost right away: deleted items are kept for a week and can be brought back with undo.",
         inputSchema: { paths: z.array(z.string()).min(1).max(cfg.maxFilesPerOperation) },
@@ -248,12 +248,12 @@ export function registerFileTools(ctx) {
         await journal.record({ id, action: "delete", summary: `Deleted ${items.length} item(s)`, items });
         return `Deleted ${items.length} item(s). They are kept for ${cfg.keepHistoryDays} days. Undo id: ${id}`;
     }));
-    server.registerTool("file_info", { title: "File details", description: "Size, dates and type of a file or folder.", inputSchema: { path: z.string() } }, async ({ path: p }) => run("file_info", `info ${p}`, async () => {
+    server.registerTool("file_info", { annotations: { readOnlyHint: true, openWorldHint: false }, title: "File details", description: "Size, dates and type of a file or folder.", inputSchema: { path: z.string() } }, async ({ path: p }) => run("file_info", `info ${p}`, async () => {
         const real = await requireReadable(p, cfg);
         const st = await fs.stat(real);
         return [`${pretty(real)}`, `type: ${st.isDirectory() ? "folder" : "file"}`, `size: ${human(st.size)}`, `modified: ${st.mtime.toISOString()}`, `created: ${st.birthtime.toISOString()}`].join("\n");
     }));
-    server.registerTool("disk_usage", {
+    server.registerTool("disk_usage", { annotations: { readOnlyHint: true, openWorldHint: false },
         title: "What takes space",
         description: "Lists the biggest files and sub-folders inside a folder, to find what fills the disk.",
         inputSchema: { path: z.string(), top: z.number().int().min(5).max(100).default(20) },
@@ -293,7 +293,7 @@ export function registerFileTools(ctx) {
             "", "Biggest files:", ...topFiles.map(([f, s]) => `  ${human(s).padStart(8)}  ${pretty(f)}`),
         ].join("\n");
     }));
-    server.registerTool("find_duplicates", {
+    server.registerTool("find_duplicates", { annotations: { readOnlyHint: true, openWorldHint: false },
         title: "Find duplicate files",
         description: "Finds files with identical content inside a folder (same size, then same checksum). Shows groups so the user can decide which copies to delete.",
         inputSchema: { path: z.string(), min_size_kb: z.number().int().min(0).default(10) },

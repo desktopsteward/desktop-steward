@@ -31,10 +31,9 @@ This repository is the core of Desktop Steward: the file tools, the folder rules
 ```
 npm install
 npm test            # builds and runs the test suite
-npm run bundle      # builds build/desktop-steward-<version>-<platform>.mcpb for this platform
 ```
 
-Node.js 22 or newer. The bundle is platform-specific because the bundled search binary (ripgrep) is.
+Node.js 22 or newer. The .mcpb bundles are built from the private repo and published on desktopsteward.com.
 
 ## Configuration
 

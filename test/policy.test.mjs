@@ -82,3 +82,14 @@ test("windows path shapes are rejected when running as win32", async () => {
     Object.defineProperty(process, "platform", orig);
   }
 });
+
+test("modes: Simple blocks hidden items and programs, Standard only programs, Expert neither", async () => {
+  const ws = path.join(HOME, "Documents", "AI Workspace");
+  await fs.mkdir(ws, { recursive: true });
+  const hidden = path.join(ws, ".notes.txt"), prog = path.join(ws, "run.sh");
+  await assert.rejects(requireWritable(hidden, { ...cfg, mode: "simple" }), PolicyError);
+  await assert.rejects(requireWritable(prog, { ...cfg, mode: "simple" }), PolicyError);
+  assert.equal(await requireWritable(hidden, { ...cfg, mode: "standard" }), hidden);
+  await assert.rejects(requireWritable(prog, { ...cfg, mode: "standard" }), /outside Expert mode/);
+  assert.equal(await requireWritable(prog, { ...cfg, mode: "expert" }), prog);
+});
